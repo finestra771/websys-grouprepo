@@ -1,5 +1,5 @@
 # websys-grouprepo
-Repo for Web Systems (CSCI-2800) Finance group:
+Repo for Web Systems (CSCI-2800) Finance group 5:
 - Jodie Cho (@finestra771)
 - Lala Liu (@lliu15)
 - SoMey Dong (@meys4)
