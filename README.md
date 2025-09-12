@@ -1,2 +1,7 @@
 # websys-grouprepo
-Repo for websys group, Jodie/Lala/Somey/Dathan/Oliver
+Repo for Web Systems (CSCI-2800) Finance group 5:
+- Jodie Cho (@finestra771)
+- Lala Liu (@lliu15)
+- SoMey Dong (@meys4)
+- Dathan Lang (@atypicality)
+- Oliver Crotty (@crotto8404)
