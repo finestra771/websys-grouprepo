@@ -5,3 +5,4 @@ Repo for Web Systems (CSCI-2800) Finance group 5:
 - SoMey Dong (@meys4)
 - Dathan Lang (@atypicality)
 - Oliver Crotty (@crotto8404)
+- Zhimin Jiang (@ZhiminxCODE)
