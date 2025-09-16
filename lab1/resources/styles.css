@@ -1,0 +1,28 @@
+/* Navigation Bar */
+nav {
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: rgb(247, 255, 250);
+  height: 13vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+.nav-dimmed {
+  opacity: 0.75;
+  transition: opacity 0.5s ease; 
+}
