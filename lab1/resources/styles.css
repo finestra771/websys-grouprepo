@@ -107,7 +107,6 @@ nav a:hover {
 
 /* Home */
 header {
-  background: url('../images/home-bg.jpg') no-repeat center center/cover;
   height: 75vh;
   display: flex;
   flex-direction: column;
