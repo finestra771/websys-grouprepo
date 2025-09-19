@@ -96,6 +96,8 @@ nav ul li a {
 nav a:hover {
   color: #B87432;
   text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
 }
 
 .nav-dimmed {
@@ -139,11 +141,11 @@ header {
   /* Remove default border */
   border-top: 3px solid rgb(136, 96, 96);
   /* Add a custom top border */
-  margin: 0px 0;
+  margin-left: -1px;
   /* Add some vertical spacing */
   width: 15%;
   /* Set the width */
-  align: center;
+  text-align: center;
   /* Center the line */
 }
 
@@ -212,4 +214,3 @@ header {
   object-fit: cover;
   object-position: center 60%;
 }
-
