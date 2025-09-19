@@ -18,3 +18,5 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 ## Resources Used:
 - external resources and links used will be added here
 - https://befonts.com/styrene-font-family.html font for title
+- http://font.woowahan.com/dohyeon/ alternate font for title (in use)
+- https://www.fontyukle.net/downloadfont/Monark-Bold
