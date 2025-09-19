@@ -33,12 +33,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position:fixed;
-  
+  position: fixed;
+}
+.title{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin: 0 0 0 0;
 }
 
 nav h1 a {
-  margin-left: 20px;
   font-family: 'StyreneA-Black', sans-serif;
   font-size: 24px;
   color: #B87432;
@@ -46,7 +49,7 @@ nav h1 a {
 }
 
 nav h1 a:hover {
-  color: #B87432;  
+  color: #B87432;
   text-decoration: none;
 }
 
@@ -77,13 +80,13 @@ nav ul li a {
 }
 
 nav a:hover {
-  color: #B87432;  
+  color: #B87432;
   text-decoration: underline;
 }
 
 .nav-dimmed {
   opacity: 0.75;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 
 /* Home */
@@ -102,12 +105,13 @@ header {
 #about-us {
   padding: 60px 20px;
   background-color: #F3DFCB;
+  display: grid;
 }
 
 /* Gallery */
-#gallery {  
-    padding: 60px 20px;
-    background-color: #FFFFF9;
+#gallery {
+  padding: 60px 20px;
+  background-color: #FFFFF9;
 }
 
 /* Contact */
@@ -115,3 +119,82 @@ header {
   padding: 60px 20px;
   background-color: #ecd1d1;
 }
+
+.vertical-line {
+  border: none;
+  /* Remove default border */
+  border-top: 3px solid rgb(136, 96, 96);
+  /* Add a custom top border */
+  margin: 0px 0;
+  /* Add some vertical spacing */
+  width: 15%;
+  /* Set the width */
+  align: center;
+  /* Center the line */
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.project {
+  width: 300px;
+  background: #fff;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  background: #f1dac7;
+  /* placeholder color */
+}
+
+.project-title {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #b5662a;
+}
+
+.project-desc {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #734321;
+  margin: 10px;
+  text-align: center;
+}
+
+.projects2{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+#profile {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+
+#profile1 {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#profile2 {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
