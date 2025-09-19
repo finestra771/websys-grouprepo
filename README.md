@@ -20,3 +20,6 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 - https://befonts.com/styrene-font-family.html font for title
 - http://font.woowahan.com/dohyeon/ alternate font for title (in use)
 - https://www.fontyukle.net/downloadfont/Monark-Bold
+- https://www.geeksforgeeks.org/jquery/how-to-redirect-to-a-particular-section-of-a-page-using-html-or-jquery/#method-2-using-jquery (jquery move to section animation)
+- https://www.flaticon.com/free-icon/bubble-tea_6142807 free icon for bubble tea from flaticon
+- https://api.jquery.com/scrollTop/ animations for href link
