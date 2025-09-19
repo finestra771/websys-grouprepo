@@ -9,4 +9,5 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener("scrollend", (event) => {
     const navbar = document.querySelector("nav");
+    navbar.classList.remove('nav-dimmed');
 });
