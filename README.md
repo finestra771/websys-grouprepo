@@ -1,19 +1,15 @@
-# websys-grouprepo
-Repo for Web Systems (CSCI-2800) Finance group 5:
-
-
-# ITWS2110 Websys Group Repo | Finance group 5:
+# ITWS2110 Websys Group Repo | Finance Group 5:
 
 ## Members
-- Jodie Cho [@finestra771](https://github.com/finestra771)
-- Lala Liu (@lliu15)
+- Jodie Cho ([@finestra771](https://github.com/finestra771))
+- Lala Liu ([@lliu15](https://github.com/lliu15))
 - SoMey Dong (@meys4)
 - Dathan Lang ([@atypicality](https://github.com/atypicality))
 - Oliver Crotty (@crotto8404)
 - Zhimin Jiang (@ZhiminxCODE)
 
 ## Background
-Hey we are the [insert group name]!
+Hey we are Gatcha!, a team of six focused on developing an interactive site dealing with data visualization based on finance datasets. 
 
 ## Important Notes:
 - Open Source
