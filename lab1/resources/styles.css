@@ -104,14 +104,14 @@ header {
 /* About Us */
 #about-us {
   padding: 60px 20px;
-  background-color: #F3DFCB;
+  background-color: #FFFFF9;
   display: grid;
 }
 
 /* Gallery */
 #gallery {
   padding: 60px 20px;
-  background-color: #FFFFF9;
+  background-color: #F3DFCB;
 }
 
 /* Contact */
@@ -174,9 +174,10 @@ header {
   display: flex;
   justify-content: center;
   gap: 100px;
+  margin-top: 3em;
 }
 
-#profile {
+.profile {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -184,14 +185,14 @@ header {
 }
 
 
-#profile1 {
+.profile1 {
   width: 100%;
   height: 250px;
   object-fit: cover;
   object-position: center center;
 }
 
-#profile2 {
+.profile2 {
   width: 100%;
   height: 250px;
   object-fit: cover;
