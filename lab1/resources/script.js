@@ -14,6 +14,12 @@ window.addEventListener("scrollend", (event) => {
 
 
 $(document).ready(() => {
+    $('#link0').click(function (e) {
+        e.preventDefault(); 
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top
+        }, 700);
+    });
     $('#link1').click(function (e) {
         e.preventDefault(); 
         $('html, body').animate({
