@@ -4,7 +4,7 @@ Here's a running log of how lab1 was created and made:
 - Dathan, our main developer, developed the rest of the landing page, following the wireframe Jodie created. 
 - SoMey, our resident graphics designer, created the logo for the team.
 - Oliver, our writer, wrote the descriptions for our projects and made edits to the rest of the site. 
-- Zhimin, our editor, reviewed styling of the site.
+- Zhimin, our editor, reviewed the styling of the site and made edits the CSS.
 - Lala, our documenter, logged the progress of the team and made minor edits to the rest of the site. 
 
 ## Resources
