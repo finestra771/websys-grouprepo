@@ -1,29 +1,48 @@
-var coll = document.getElementsByClassName("collapsible-article");
-var i;
+var collArticles = document.getElementsByClassName("collapsible-article");
+var collAmendments = document.getElementsByClassName("collapsible-amendment");
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+//this just makes it so both lists can have same effects
+var allColl = [...collArticles, ...collAmendments];
+
+//go through all entries and see if user clicked
+for (let i = 0; i < allColl.length; i++) {
+  allColl[i].addEventListener("click", function() {
     var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
+
+    //if they clicked one, close all others
+    for (let j = 0; j < allColl.length; j++) {
+      if (allColl[j] !== this && allColl[j].classList.contains("active")) {
+        $(allColl[j].nextElementSibling).slideUp(500, 'swing');
+        allColl[j].classList.remove("active");
+      }
     }
+
+    //make clicked one active and open it
+    $(content).slideToggle(500, 'swing');
+    this.classList.toggle("active");
   });
 }
 
-var coll1 = document.getElementsByClassName("collapsible-amendment");
-var i;
+// this is for scrolling to sections
+$(document).ready(() => {
+    $('#link1').click(function (e) {
+        e.preventDefault(); 
+        $('html, body').animate({
+            scrollTop: $('#header').offset().top - 198
+        }, 700);
+    });
 
-for (i = 0; i < coll1.length; i++) {
-  coll1[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
+    $('#link2').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#articles').offset().top - 198
+        }, 700);
+    });
+
+    $('#link3').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#amendments').offset().top - 198
+        }, 700);
+    });
+});

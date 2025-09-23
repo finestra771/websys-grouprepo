@@ -44,6 +44,32 @@ body {
   line-height: 1.6;
 }
 
+header {
+  background-image: linear-gradient(to right, #561119, #191864);
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: em;
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'DM Serif Text', serif;
+  position: fixed;
+  margin-top: -198px;
+}
+
+header a {
+  color:#2b7de7
+}
+
+header a:hover {
+  color:#e25c3a
+}
+
+#articles {
+  margin-top: 198px;
+}
+
 .article{
     margin: 20px;
     text-align: left;
