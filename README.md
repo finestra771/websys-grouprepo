@@ -1,4 +1,4 @@
-# ITWS2110 Websys Group Repo | Finance Group 5:
+# ITWS2110 Websys Group Repo | Finance Group 13:
 
 ## Members
 - Jodie Cho ([@finestra771](https://github.com/finestra771))
