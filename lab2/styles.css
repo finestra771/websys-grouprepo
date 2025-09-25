@@ -72,11 +72,11 @@ header a:hover {
   background: rgb(230, 156, 66);
   color: white;
   height: auto;
-  max-width: 300px;
+  max-width: 600px;
   padding: 6px 10px;
   border-radius: 5px;
   text-align: center;
-  font-size: 14px;
+  font-size: 17px;
   pointer-events: none; /* Ignore mouse so it doesn't flicker */
   z-index: 1000;
 }
