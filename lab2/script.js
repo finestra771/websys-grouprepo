@@ -49,6 +49,8 @@ $(document).ready(() => {
 
 const popup = document.getElementById("popup");
 const pg = document.querySelectorAll(".section-body, #amendments article");
+const centerX = window.innerWidth / 2;   
+const centerY = window.innerHeight / 2;
 
 pg.forEach(p => {
   p.addEventListener("mouseenter", () => {
@@ -57,8 +59,27 @@ pg.forEach(p => {
   });
 
   p.addEventListener("mousemove", (e) => {
-    popup.style.left = e.pageX + 10 + "px";
-    popup.style.top = e.pageY + 10 + "px";
+  
+    const margin = 10; 
+    const popupRect = popup.getBoundingClientRect();
+
+    let left = e.pageX - 300; //makes sure our mouse is in the middle of popup
+    let top = e.pageY;
+
+    if (left < margin) {
+      left = margin;  //if left is too small, set to margin
+    } else if (left + popupRect.width > window.innerWidth - margin) {
+      left = window.innerWidth - popupRect.width - margin; //if to big, do the reverse
+    }
+
+    //same logic for bottom
+   if (top + popupRect.height > window.scrollY + window.innerHeight - margin) {
+    top = window.scrollY + window.innerHeight - popupRect.height - margin;
+   }
+
+   popup.style.left = left + "px";
+   popup.style.top = top + "px";
+   
   });
 
   p.addEventListener("mouseleave", () => {
