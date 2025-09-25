@@ -46,3 +46,22 @@ $(document).ready(() => {
         }, 700);
     });
 });
+
+const popup = document.getElementById("popup");
+const pg = document.querySelectorAll(".section-body, #amendments article");
+
+pg.forEach(p => {
+  p.addEventListener("mouseenter", () => {
+    popup.textContent = p.dataset.info;
+    popup.style.display = "block";
+  });
+
+  p.addEventListener("mousemove", (e) => {
+    popup.style.left = e.pageX + 10 + "px";
+    popup.style.top = e.pageY + 10 + "px";
+  });
+
+  p.addEventListener("mouseleave", () => {
+    popup.style.display = "none";
+  });
+});

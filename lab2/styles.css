@@ -66,6 +66,21 @@ header a:hover {
   color:#e25c3a
 }
 
+#popup {
+  display: none;
+  position: absolute;
+  background: rgb(230, 156, 66);
+  color: white;
+  height: auto;
+  max-width: 300px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  pointer-events: none; /* Ignore mouse so it doesn't flicker */
+  z-index: 1000;
+}
+
 #articles {
   margin-top: 198px;
 }
@@ -78,6 +93,7 @@ header a:hover {
 .content{
     background-color: #b319420c;
 }
+
 .collapsible-article {
   background-color: #B31942;
   color: #444;
