@@ -4,7 +4,7 @@
 
 
 ### Oliver Crotty
-
+For this lab I worked on writing annotations for article 2 of the constitution and the eighth through tenth amendments. To make it more understandable I had to describe what each section meant in relation to the function of the government. I had to spend more time researching how interpretations of some sections had developed over the history of the country and how it has been historically applied.
 
 ### SoMey Dong
 For this lab I was assigned to annotate parts of the Constituion. I annotated Article III and Amendments Five-Seven. As I read over the document, I highlighted the important parts, and broke it down to be more digestable. When I encountered parts I was unsure of I referenced other websites such as the 5th and 6th amendments that lead to the creation of Miranda Rights. Combining my summarization with other sources helped add more detail to the explanation. I could explain how the amendments affect us today, and how the constitution was used to create modern laws even though it is centeries old.
