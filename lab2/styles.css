@@ -155,6 +155,10 @@ header ul {
   background-color: #B31942;
 }
 
+#articles .active, .collapsible-section:hover {
+  background-color: #0A3161;
+}
+
 #history .active, .collapsible-section:hover {
   background-color: #d5cbec;
 }
