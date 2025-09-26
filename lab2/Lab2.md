@@ -7,7 +7,7 @@
 
 
 ### SoMey Dong
-
+For this lab I was assigned to annotate parts of the Constituion. I annotated Article III and Amendments Five-Seven. As I read over the document, I highlighted the important parts, and broke it down to be more digestable. When I encountered parts I was unsure of I referenced other websites such as the 5th and 6th amendments that lead to the creation of Miranda Rights. Combining my summarization with other sources helped add more detail to the explanation. I could explain how the amendments affect us today, and how the constitution was used to create modern laws even though it is centeries old.
 
 ### Dathan Lang
 For this lab, I was given the task to code the annotations as well as make the site more accesible for users. To do this, I spent time researching JQuery api so I could learn how to do animations. These include having sections expand and contract, having modes to stop popup annotations if they get annoying, and also have links that scroll down to the correct area of the page. Furthermore, I helped design a bit of the styling, mainly the navigation bar which was done by having its position be fixed, and also adding color gradients. Finally, I concluded my work by helping to format some of my groupmates analysis and do proofreading.
@@ -38,7 +38,9 @@ https://www.archives.gov/founding-docs/more-perfect-union
 https://www.law.cornell.edu/wex/magna_carta
 https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/shays-rebellion
 https://constitutioncenter.org/media/files/4.5_Primary_Source__Who_were_the_Federalists_and_the_Anti-Federalists__.docx_.pdf
-
-
+https://www.solomonappeals.com/blog/the-difference-between-appellate-jurisdiction-and-original-jurisdiction/ 
+https://www.reaganlibrary.gov/constitutional-amendments-amendment-6-rights-defendant 
+https://www.reaganlibrary.gov/constitutional-amendments-amendment-7-right-jury-trial-civil-affairs  
+https://www.oyez.org/cases/1962/155 
 
 
