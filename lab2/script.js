@@ -1,8 +1,9 @@
 var collArticles = document.getElementsByClassName("collapsible-article");
 var collAmendments = document.getElementsByClassName("collapsible-amendment");
+var collSection = document.getElementsByClassName("collapsible-section");
 
 //this just makes it so both lists can have same effects
-var allColl = [...collArticles, ...collAmendments];
+var allColl = [...collArticles, ...collAmendments, ...collSection];
 
 //go through all entries and see if user clicked
 for (let i = 0; i < allColl.length; i++) {

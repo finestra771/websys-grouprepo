@@ -131,12 +131,32 @@ header ul {
   color: white;
 }
 
+.collapsible-section {
+  background-color: #721F51;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'DM Serif Text', serif;
+  color: white;
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible-article:hover {
   background-color: #0A3161;
 }
 .active, .collapsible-amendment:hover {
   background-color: #B31942;
+}
+
+.active, .collapsible-section:hover {
+  background-color: #d5cbec;
 }
 
 /* Style the collapsible content. Note: hidden by default */
