@@ -4,7 +4,7 @@
 
 
 ### Oliver Crotty
-
+For this lab I worked on writing annotations for article 2 of the constitution and the eighth through tenth amendments. To make it more understandable I had to describe what each section meant in relation to the function of the government. I had to spend more time researching how interpretations of some sections had developed over the history of the country and how it has been historically applied.
 
 ### SoMey Dong
 
