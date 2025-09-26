@@ -10,7 +10,7 @@
 
 
 ### Dathan Lang
-
+For this lab, I was given the task to code the annotations as well as make the site more accesible for users. To do this, I spent time researching JQuery api so I could learn how to do animations. These include having sections expand and contract, having modes to stop popup annotations if they get annoying, and also have links that scroll down to the correct area of the page. Furthermore, I helped design a bit of the styling, mainly the navigation bar which was done by having its position be fixed, and also adding color gradients. Finally, I concluded my work by helping to format some of my groupmates analysis and do proofreading.
 
 ### Lala Liu
 
@@ -23,6 +23,7 @@ I struggled with a few parts of the assignment which pushed me to think harder. 
 
 
 ## Technical Resources
+https://api.jquery.com/
 https://www.sitepoint.com/community/t/html-5-when-to-use-article-aside-section-div/5742/3
 https://www.scaler.com/topics/aside-tag-in-html/
 https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes - this was used for getting individual annotations
