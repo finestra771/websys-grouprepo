@@ -25,26 +25,47 @@ for (let i = 0; i < allColl.length; i++) {
 
 // this is for scrolling to sections
 $(document).ready(() => {
-    $('#link1').click(function (e) {
-        e.preventDefault(); 
-        $('html, body').animate({
-            scrollTop: $('#header').offset().top - 198
-        }, 700);
-    });
-
     $('#link2').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#articles').offset().top - 198
+            scrollTop: $('#articles').offset().top - 238
         }, 700);
     });
 
     $('#link3').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#amendments').offset().top - 198
+            scrollTop: $('#amendments').offset().top - 238
         }, 700);
     });
+
+    $('#link4').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#history').offset().top - 238
+        }, 700);
+    });
+});
+
+let on = false;
+const button = document.getElementById("popup-toggle");
+button.addEventListener("click", () => {
+    on = !on;
+    if (on) {
+        pg.forEach(p => {
+        p.addEventListener("mouseenter", showPopup);
+        p.addEventListener("mousemove", movePopup);
+        p.addEventListener("mouseleave", hidePopup);
+        button.textContent = "Popup Mode: ON";
+      });
+    } else {
+        pg.forEach(p => {
+        p.removeEventListener("mouseenter", showPopup);
+        p.removeEventListener("mousemove", movePopup);
+        p.removeEventListener("mouseleave", hidePopup);
+        button.textContent = "Popup Mode: OFF";
+      });
+    }
 });
 
 const popup = document.getElementById("popup");
@@ -52,37 +73,38 @@ const pg = document.querySelectorAll(".section-body, #amendments article");
 const centerX = window.innerWidth / 2;   
 const centerY = window.innerHeight / 2;
 
-pg.forEach(p => {
-  p.addEventListener("mouseenter", () => {
-    popup.textContent = p.dataset.info;
-    popup.style.display = "block";
-  });
+function showPopup(e) {
+  popup.textContent = e.target.dataset.info;
+  popup.style.display = "block";
+}
 
-  p.addEventListener("mousemove", (e) => {
-  
-    const margin = 10; 
-    const popupRect = popup.getBoundingClientRect();
+function movePopup(e) {
+  const margin = 10;
+  const popupRect = popup.getBoundingClientRect();
 
-    let left = e.pageX - 300; //makes sure our mouse is in the middle of popup
-    let top = e.pageY;
+  let left = e.pageX - 300;
+  let top = e.pageY;
 
-    if (left < margin) {
-      left = margin;  //if left is too small, set to margin
-    } else if (left + popupRect.width > window.innerWidth - margin) {
-      left = window.innerWidth - popupRect.width - margin; //if to big, do the reverse
-    }
+  //this is to make sure everything stays within view/window
+  if (left < margin) 
+  {
+    left = margin;
+  } else if (left + popupRect.width > window.innerWidth - margin) {
+    left = window.innerWidth - popupRect.width - margin;
+  }
 
-    //same logic for bottom
-   if (top + popupRect.height > window.scrollY + window.innerHeight - margin) {
+  if (top < window.scrollY + margin) 
+  {
+    top = window.scrollY + margin;
+  }
+  if (top + popupRect.height > window.scrollY + window.innerHeight - margin) {
     top = window.scrollY + window.innerHeight - popupRect.height - margin;
-   }
+  }
 
-   popup.style.left = left + "px";
-   popup.style.top = top + "px";
-   
-  });
+  popup.style.left = left + "px";
+  popup.style.top = top + "px";
+}
 
-  p.addEventListener("mouseleave", () => {
-    popup.style.display = "none";
-  });
-});
+function hidePopup() {
+  popup.style.display = "none";
+}

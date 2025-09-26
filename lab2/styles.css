@@ -55,7 +55,7 @@ header {
   font-weight: 700;
   font-family: 'DM Serif Text', serif;
   position: fixed;
-  margin-top: -198px;
+  margin-top: -238px;
 }
 
 header a {
@@ -64,6 +64,11 @@ header a {
 
 header a:hover {
   color:#e25c3a
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
 }
 
 #popup {
@@ -82,7 +87,7 @@ header a:hover {
 }
 
 #articles {
-  margin-top: 198px;
+  margin-top: 238px;
 }
 
 .article{
