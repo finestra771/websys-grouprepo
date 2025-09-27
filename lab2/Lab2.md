@@ -1,5 +1,13 @@
 ## Lab2 Documentation
 
+TLDR; Here's a quick task break down for everyone in the group:
+- Jodie worked on the overall design of the website, creating the HTML and CSS frame as well as the drop-down functionality of the site.
+- Oliver wrote the annotations for Article 2 as well as Amendments 8 through 10.
+- SoMey annotated Article 3 along with Amendments 5 through 7.
+- Dathan worked on the functionality to show the annotations as a pop up box when your cursor hovers a section. He additionally aided in designing the navigation bar, and both proofreading and formmatting our annotations.
+- Lala marked up the Constitution, wrote the history of the Constitution and the annotations for Article 4 to 7. 
+- Zhimin annotated Article 2 and Amendments 1 through 4. 
+
 ### Jodie Cho
 For this lab I worked on making the html and css frame, and overall design of the website. I picked the color scheme of the US flag to make it look like constitution, and made a toggle of the Articles and Amendments. I had trouble making the javascript for articles, to make them animate when we clicked on it. I found some references on google, especially on W3schools. There, I could fine some references for css and javascript, and fixed the problem, making the toggles collapsible.
 
@@ -14,8 +22,7 @@ For this lab I was assigned to annotate parts of the Constituion. I annotated Ar
 For this lab, I was given the task to code the annotations as well as make the site more accesible for users. To do this, I spent time researching JQuery api so I could learn how to do animations. These include having sections expand and contract, having modes to stop popup annotations if they get annoying, and also have links that scroll down to the correct area of the page. Furthermore, I helped design a bit of the styling, mainly the navigation bar which was done by having its position be fixed, and also adding color gradients. Finally, I concluded my work by helping to format some of my groupmates analysis and do proofreading.
 
 ### Lala Liu
-
-
+Honestly, I was pretty excited for this lab since I used to be a major fan of history. I spent most of my time marking up the Constitution after doing some research into what tags HTML offered rather than just using the div tags that we usually use. After that I spent some time outline a timeline of the Constitution from what I remembered and then fleshing it out with online sources. Finally I concluded my work by annotating Articles 4 to 7. I think I struggled the most with understanding Article 4 due to its length and the language the Framers of the Constitution used. Though after looking at Constitution Annotated (the source that was provided to us) and the analysis made in the National Constitution Center, I like to think I understand it a little more now. 
 
 ### Zhimin Jiang
 I began this lab by carefully reading through Articles I–IV of the U.S. Constitution and the first few amendments. My main goal was to translate the text into plain, modern English while keeping the original meaning intact. To make this manageable, I used a three-part structure for each section from what it means, why it matters, and a basic annotated version of what I’m reading. Once I tested this structure on Article I, Section 1, I found it worked smoothly, so I applied it consistently throughout the rest of the assignment.
