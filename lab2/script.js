@@ -75,6 +75,12 @@ const centerX = window.innerWidth / 2;
 const centerY = window.innerHeight / 2;
 
 function showPopup(e) {
+  const info = e.target.dataset.info;
+  if(!info){
+    popup.style.display = "none";
+    return;
+  }
+  
   popup.textContent = e.target.dataset.info;
   popup.style.display = "block";
 }
