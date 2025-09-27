@@ -1,6 +1,7 @@
 ## Lab2 Documentation
 
 ### Jodie Cho
+For this lab I worked on making the html and css frame, and overall design of the website. I picked the color scheme of the US flag to make it look like constitution, and made a toggle of the Articles and Amendments. I had trouble making the javascript for articles, to make them animate when we clicked on it. I found some references on google, especially on W3schools. There, I could fine some references for css and javascript, and fixed the problem, making the toggles collapsible.
 
 
 ### Oliver Crotty
@@ -29,6 +30,7 @@ https://www.scaler.com/topics/aside-tag-in-html/
 https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes - this was used for getting individual annotations
 https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect -this helps with getting the dimensions of our popupbox
 https://www.degraeve.com/reference/specialcharacters.php
+https://www.w3schools.com/howto/howto_js_collapsible.asp
 
 ## Consitutional Resources
 https://constitution.congress.gov/constitution/
@@ -42,5 +44,6 @@ https://www.solomonappeals.com/blog/the-difference-between-appellate-jurisdictio
 https://www.reaganlibrary.gov/constitutional-amendments-amendment-6-rights-defendant 
 https://www.reaganlibrary.gov/constitutional-amendments-amendment-7-right-jury-trial-civil-affairs  
 https://www.oyez.org/cases/1962/155 
+
 
 
