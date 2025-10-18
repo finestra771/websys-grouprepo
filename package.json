@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "finnhub": "^2.0.11"
+  },
+  "name": "websys-grouprepo",
+  "version": "1.0.0",
+  "description": "- Jodie Cho ([@finestra771](https://github.com/finestra771))\r - Lala Liu ([@lliu15](https://github.com/lliu15))\r - SoMey Dong ([@meys4](https://github.com/meys4))\r - Dathan Lang ([@atypicality](https://github.com/atypicality))\r - Oliver Crotty ([@crotto8404](https://github.com/crotto8404))\r - Zhimin Jiang ([@ZhiminxCODE](https://github.com/zhiminxCode))",
+  "main": "index.js",
+  "scripts": {
+    "start": "node WebSysTariffApi/financialExtractor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finestra771/websys-grouprepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finestra771/websys-grouprepo/issues"
+  },
+  "homepage": "https://github.com/finestra771/websys-grouprepo#readme"
+}
