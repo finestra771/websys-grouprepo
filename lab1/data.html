@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
+    <!-- <link rel="icon" href="resources/images/bubble-tea.png" type="image/png"> -->
+    <title>Stonkly</title>
+    <style>
+        #link0 {
+            margin-left: 40px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #link0:hover {
+            color: #8f5a26;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1 class="title">
+            <a href="#" id="link0"> STONKLY💸</a>
+        </h1>
+        <ul>
+            <li><a href="#" id="link1" class="nav-button">HOME</a></li>
+            <li><a href="#" id="link2" class="nav-button">COMPANY ANALYZER</a></li>
+            <li><a href="#" id="link3" class="nav-button">ABOUT US</a></li>
+            <li><a href="#" id="link4" class="nav-button">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1 style="font-size: 3rem;">✦ STONKLY ✦ </h1>
+        <div class="vertical-line"></div>
+        <h2>99% of Gamblers Quit Before they Win Big.</h2>
+        <h3>Be the 1% that Wins Big!</h3>
+    </header>
+
+    <section id="gallery"> 
+        <h1 style="font-size: 2.7rem;">Company Stock Data</h1>
+        <div class="search-bar">
+            <input type="text" id="company-input" placeholder="Enter Company Ticker Symbol (e.g., AAPL)">
+            <button id="fetch-data-button">Fetch Data</button>
+        </div>
+        <div id="chart-container">
+            <svg id="chart" width="800" height="400"></svg>
+            <div id="cardAdd"></div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <h1 style="font-size: 2.7rem;">MEET OUR TEAM</h1>
+        <div class="projects">
+            <div class="project">
+                <div class="project-image"><a href="https://github.com/finestra771"><img src="resources/images/Jodie.jpg" class="profile"></a></div>
+                <div class="project-title"><a href="https://github.com/finestra771">Jodie Cho</a></div>
+            </div>
+            <div class="project">
+                <div class="project-image"><a href="https://atypicality.github.io/WebSystemsFall2025_DathanLang/"><img src="resources/images/dathan.jpg" class="profile"></a></div>
+                <div class="project-title"><a href="https://atypicality.github.io/WebSystemsFall2025_DathanLang/">Dathan Lang</a></div>
+            </div>
+
+
+            <div class="project">
+                <div class="project-image"><a href="https:/www.linkedin.com/in/lala-liu"><img src="resources/images/Lala.jpg" class="profile1"></a></div>
+                <div class="project-title"><a href="https:/www.linkedin.com/in/lala-liu">Lala Liu</a></div>
+            </div>
+        </div>
+        <div class="projects2">
+            <div class="project">
+                <div class="project-image"><a href="https://www.linkedin.com/in/somey-dong-4bb579385/"><img src="resources/images/somey.JPG" class = "profile2"></a></div>
+                <div class="project-title"><a href="https://www.linkedin.com/in/somey-dong-4bb579385/">SoMey Dong</a></div>
+            </div>
+
+            <div class="project">
+                <div class="project-image"><a href="https://www.linkedin.com/in/olivercrotty/"><img src="resources/images/oliver.JPG" class="profile"></a></div>
+                <div class="project-title"><a href="https://www.linkedin.com/in/olivercrotty/">Oliver Crotty</a></div>
+            </div>
+
+            <div class="project">
+                <div class="project-image"><a href="https://github.com/zhiminxCode"><img src="resources/images/Zhimin.png" class="profile1"></a></div>
+                <div class="project-title"><a href="https://github.com/zhiminxCode">Zhimin Jiang</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p>&copy; 2025 Gatcha!. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="resources/jquery-3.7.1.min.js"></script>
+    <script src="resources/script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="api.js"></script>
+
+</body>
+
+</html>
