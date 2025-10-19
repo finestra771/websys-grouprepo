@@ -28,3 +28,4 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 - https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist
 - https://www.w3schools.com/jsref/jsref_toisostring.asp
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+- https://blog.hubspot.com/website/css-animation-examples
