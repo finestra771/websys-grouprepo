@@ -23,3 +23,9 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 - https://www.geeksforgeeks.org/jquery/how-to-redirect-to-a-particular-section-of-a-page-using-html-or-jquery/#method-2-using-jquery (jquery move to section animation)
 - https://www.flaticon.com/free-icon/bubble-tea_6142807 free icon for bubble tea from flaticon
 - https://api.jquery.com/scrollTop/ animations for href link
+- https://finnhub.io/ reliable fintech data
+- https://d3-graph-gallery.com/graph/line_cursor.html
+- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist
+- https://www.w3schools.com/jsref/jsref_toisostring.asp
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+- https://blog.hubspot.com/website/css-animation-examples
