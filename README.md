@@ -23,9 +23,12 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 - https://www.geeksforgeeks.org/jquery/how-to-redirect-to-a-particular-section-of-a-page-using-html-or-jquery/#method-2-using-jquery (jquery move to section animation)
 - https://www.flaticon.com/free-icon/bubble-tea_6142807 free icon for bubble tea from flaticon
 - https://api.jquery.com/scrollTop/ animations for href link
-- https://finnhub.io/ reliable fintech data
-- https://d3-graph-gallery.com/graph/line_cursor.html
-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist
-- https://www.w3schools.com/jsref/jsref_toisostring.asp
-- https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
-- https://blog.hubspot.com/website/css-animation-examples
+- https://finnhub.io/ reliable fintech data and used code for fetching data from free api model
+- https://d3-graph-gallery.com/graph/line_cursor.html used the graph code for stock data
+- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist making combobox effect
+- https://www.w3schools.com/jsref/jsref_toisostring.asp need this for conversion
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes animations for title
+- https://blog.hubspot.com/website/css-animation-examples used code for title animations
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame drawing stock market title
+- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur was using for some styling
+- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke path drawing

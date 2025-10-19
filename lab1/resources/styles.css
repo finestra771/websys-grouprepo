@@ -118,6 +118,16 @@ header {
   text-align: center;
 }
 
+#titleStart {
+  text-align: center;
+  background-color: #f6f2f2;
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* About Us */
 #about-us {
   padding: 60px 20px;
@@ -234,7 +244,7 @@ header {
   margin-bottom: -30px;
   margin-top: 30px;
   margin-left: -10%;
-  width: 120%;
+  width: 114%;
   overflow: hidden; /* incase data flows out of box*/
   background-color: #333;
   color: white;
@@ -280,10 +290,12 @@ header {
   font-size: 2.5rem;
   font-weight:bold;
   padding-top:200px;  
-  width:20%;
+  width:65%;
   bottom:45%;
   display:block;
-  margin-top: -100px;
+  margin-top: -150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #flip {
@@ -320,4 +332,3 @@ header {
   95%  { margin-top: -75px; }
   100% { margin-top: 0; }
 }
-
