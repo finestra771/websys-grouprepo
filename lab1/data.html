@@ -17,6 +17,14 @@
             color: #8f5a26;
             cursor: pointer;
         }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
 
@@ -36,19 +44,81 @@
     </nav>
 
     <header id="home">
-        <div id=container>
-            <div id=flip>
-                <div>✦ STONKLY ✦</div>
-                <div> Stock Market</div>
-                <div> Global News</div>
+        <canvas id="stockCanvas"></canvas>
+        <div id = titleStart>
+            <div id=container>
+                <div id=flip>
+                    <div>✦ STONKLY ✦</div>
+                    <div> Stock Market</div>
+                    <div> Global News</div>
+                </div>
             </div>
+            <h2>99% of Gamblers Quit Before they Win Big.</h2>
+            <h3>Be the 1% that Wins Big!</h3>
         </div>
-        <h2>99% of Gamblers Quit Before they Win Big.</h2>
-        <h3>Be the 1% that Wins Big!</h3>
     </header>
+    <script>
+        const canvas = document.getElementById("stockCanvas");
+        const ctx = canvas.getContext("2d");
+
+        //this is to adjust for difference window sizes
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        const brown = "#8B4513";
+        const points = [];
+        let x = 0;
+        let y = canvas.height * (0.67 + 0.03); //this was unplanned i swear
+
+        function draw() {
+            //make sure background is white
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            //this gets the random movement of points
+            x += 10;
+            y -= Math.random() * 8 - 2;
+
+            //make sure it doesn't go off canvas
+            if (y < canvas.height * 0.2) y = canvas.height * 0.8;
+
+            //reset when you reach right side
+            if (x > canvas.width) {
+                x = 0;
+                y = canvas.height * 0.7;
+                points.length = 0;
+            }
+
+            //add to list
+            points.push({ x, y });
+
+            //this draws line
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = brown;
+            ctx.shadowBlur = 0;      
+            ctx.shadowColor = "transparent"; 
+
+            //go through each points and give animation
+            for (let i = 0; i < points.length; i++) {
+                const p = points[i];
+                if (i === 0) ctx.moveTo(p.x, p.y);
+                else ctx.lineTo(p.x, p.y);
+            }
+
+            ctx.stroke();
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
 
     <section id="gallery"> 
-        <h1 style="font-size: 2.7rem; margin-top: -10px;">Company Stock Data</h1>
+        <h1 style="font-size: 2.7rem; margin-top: -10px; margin-left: 60px;">Company Stock Data</h1>
         <div class="search-bar">
             <input list="company-list" id="company-input" placeholder="Enter Security (e.g., AAPL)">
             <datalist id="company-list"></datalist>
