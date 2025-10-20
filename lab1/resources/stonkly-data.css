@@ -1,0 +1,237 @@
+/* General Styles and Fonts */
+@font-face {
+  font-family: 'StyreneA-Black';
+  src: url('./fonts/styrene-font-family-1757969151-0/StyreneB-Regular-Trial-BF63f6cbe9db1d5.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StyreneA-Bold';
+  src: url('./fonts/styrene-font-family-1757969151-0/StyreneA-Bold-Trial-BF63f6cbda1877f.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BMDOHYEON_TTF';
+  src: url('./fonts/BMDOHYEON_ttf.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monarch_Bold';
+  src: url("./fonts/Monark-Bold_FontYukle/Monark Bold.ttf") format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-family: 'Monarch_Bold', Arial, sans-serif;
+  background-color: #FFFFF9;
+  color: #B87432;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+nav {
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: #FFFFF9;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;
+}
+
+/* Logo */
+#link0 {
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#link0:hover {
+    color: #8f5a26;
+    cursor: pointer;
+}
+
+nav h1 a {
+  font-family: 'Monarch_Bold', Arial, sans-serif;
+  font-size: 24px;
+  color: #B87432;
+  text-decoration: none;
+}
+
+nav h1 a:hover {
+  color: #B87432;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav label {
+  margin-left: 20px;
+  font-family: 'Monarch_Bold', Arial, sans-serif;
+  font-size: 24px;
+  color: #DF914B;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0 20px 0 0;
+  font-family: 'Monarch_Bold', Arial, sans-serif;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(136, 96, 96);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #B87432;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+.nav-dimmed {
+  opacity: 0.75;
+  transition: opacity 0.5s ease;
+}
+
+/* Home */
+header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #B87432;
+  text-align: center;
+}
+
+#titleStart {
+  text-align: center;
+  background-color: #f6f2f2;
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Gallery */
+#gallery {
+  padding: 60px 60px 30px 0px;
+  background-color: #F3DFCB;
+}
+
+#chart-container {
+  display: flex;       
+  gap: 20px;          
+  align-items: flex-start; 
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Ticker Styles */
+.ticker-container {
+  margin-bottom: -30px;
+  margin-top: 30px;
+  margin-left: -10%;
+  width: 114%;
+  overflow: hidden; /* incase data flows out of box*/
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.ticker-content {
+  display: flex; 
+  width: max-content; 
+  animation: scroll-left 30s linear infinite; /* scrolling animation */
+}
+
+.ticker-content span {
+  font-family: monospace;
+  font-size: 16px;
+  white-space: nowrap; /* prevent the text from wrapping to the next line */
+  margin-right: 20px;
+}
+
+.ticker-content a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ticker-container a:hover {
+  color: #9b7225;
+}
+
+
+/* borrows from mozilla keyframes */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%); 
+  }
+  to {
+    transform: translateX(-50%); 
+  }
+}
+
+/* Search bar */
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+#fetch_data_button{
+    height: 50px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: #B87432;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
