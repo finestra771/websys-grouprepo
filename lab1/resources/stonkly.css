@@ -89,7 +89,8 @@ canvas {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 9em;
+  margin-top: 7em;
+  margin-bottom: 7em;
 }
 
 #stonkly-info {
@@ -104,7 +105,7 @@ canvas {
   border-radius: 30px;
   margin-right: 5em;
   text-align: center;
-  padding-top: 7%;
+  padding-top: 3%;
   padding-right: 2em;
   padding-left: 2em;
   font-size: large;
@@ -116,7 +117,7 @@ canvas {
   width: 40%;
   border-radius: 30px;
   text-align: center;
-  padding-top: 6em;
+  padding-top: 3%;
   padding-right: 2em;
   padding-left: 2em;
   font-size: large;
@@ -124,4 +125,6 @@ canvas {
 
 #featureList > ul {
   list-style-type: none;
+  text-align: left;
+  margin-left: 4em;
 }
