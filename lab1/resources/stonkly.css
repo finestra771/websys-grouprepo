@@ -73,3 +73,29 @@ canvas {
   95%  { margin-top: -75px; }
   100% { margin-top: 0; }
 }
+
+/* Stonkly Info Section */
+#block {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#stonkly-info {
+  padding-top: 10px;
+}
+
+#infoBlock {
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 30px;
+  margin-right: 50px;
+}
+
+#featureList {
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 30px;
+}
