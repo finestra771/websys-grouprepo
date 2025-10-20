@@ -3,7 +3,7 @@ const FINNHUB_TOKEN = "d3pv3rpr01qgab52flagd3pv3rpr01qgab52flb0";
 let symbol = "";
 let updateInterval = null;
 
-//For using button
+//for using button
 document.getElementById("fetch_data_button").addEventListener("click", async () => {
   symbol = document.getElementById("company-input").value.trim().toUpperCase();
   if (!symbol) return;
@@ -17,24 +17,25 @@ document.getElementById("company-input").addEventListener("keypress", e => {
 
 if(!symbol) symbol = "NVDA";
 loadStock(symbol)
-const MAX_POINTS = 50;
+const MAX_POINTS = 120;
 
 async function loadStock(symbol) {
   try {
-    
-    //First if available remove/erase old data
+    //clear old data stuff
     if (updateInterval) {
       clearInterval(updateInterval);
       updateInterval = null;
     }
+
     const svg = d3.select("#chart");
     svg.selectAll("*").remove();
+
     const cardAdd = document.getElementById("cardAdd");
-    cardAdd.innerHTML = ""; 
+    cardAdd.innerHTML = "";
     const newsData = document.getElementById('news');
     newsData.innerHTML = "";
 
-    // Make new company card
+    //create new company card
     let card = document.createElement("div");
     card.className = "card";
     cardAdd.appendChild(card);
@@ -46,6 +47,9 @@ async function loadStock(symbol) {
 
     let companyProfile = {};
     let earningsCalendar = {};
+    const data = [];
+    const MAX_POINTS = 120; //keeps last 10 minutes
+    const UPDATE_INTERVAL = 5000; 
 
     async function fetchCompanyProfile() {
       try {
@@ -66,19 +70,17 @@ async function loadStock(symbol) {
     }
 
     function updateCard(price, time) {
-      const mkt_cap = companyProfile.marketCapitalization
-        ? (companyProfile.marketCapitalization / 1000).toFixed(2) + "B"
-        : "N/A";
+      const mkt_cap = companyProfile.marketCapitalization ? (companyProfile.marketCapitalization / 1000).toFixed(2) + "B" : "N/A";
       card.innerHTML = `
         <h3>${companyProfile.name || symbol}</h3>
-        <p>Price: $${price}</p>
+        <p>Price: $${price.toFixed(2)}</p>
         <p>Time: ${new Date(time).toLocaleTimeString()}</p>
         <p>Industry: ${companyProfile.finnhubIndustry || "N/A"}</p>
         <p>Market Cap: ${mkt_cap}</p>
       `;
     }
 
-    //Borrowed d3 setup with cursor follow
+    //D3 chart setup
     const width = +svg.attr("width");
     const height = +svg.attr("height");
     const margin = { top: 20, right: 50, bottom: 30, left: 50 };
@@ -91,7 +93,6 @@ async function loadStock(symbol) {
     const xAxisGroup = g.append("g").attr("transform", `translate(0,${innerHeight})`);
     const yAxisGroup = g.append("g");
 
-    //Axis title for graph
     g.append("text")
       .attr("class", "y axis-title")
       .attr("transform", "rotate(-90)")
@@ -105,36 +106,12 @@ async function loadStock(symbol) {
       .x(d => xScale(d.time))
       .y(d => yScale(d.price));
 
-    let data = [];
     const path = g.append("path")
       .attr("fill", "none")
       .attr("stroke", "#8B4513")
       .attr("stroke-width", 2);
 
-    //for new prices each second update with new date
-    function updateChart(newPrice) {
-      const now = new Date();
-      data.push({ time: now, price: newPrice });
-      if (data.length > MAX_POINTS) data.shift();
-
-      xScale.domain(d3.extent(data, d => d.time));
-      yScale.domain([
-        d3.min(data, d => d.price) * 0.95,
-        d3.max(data, d => d.price) * 1.05
-      ]);
-
-      path.datum(data).attr("d", line);
-      xAxisGroup.call(d3.axisBottom(xScale));
-      yAxisGroup.call(d3.axisLeft(yScale));
-
-      updateCard(newPrice, now);
-    }
-
-    await fetchCompanyProfile();
-    await fetchEarningsCalendar();
-    await fetchCompanyNews(symbol);
-
-    //mouse hovering tool used in d3
+    //hover tool from d3
     const focus = g.append("circle")
       .attr("r", 6)
       .style("fill", "none")
@@ -163,16 +140,7 @@ async function loadStock(symbol) {
         const i = bisect(data, x0, 1);
         const d0 = data[i - 1];
         const d1 = data[i];
-
-        let selectedData;
-        if (!d0) {
-            selectedData = d1;
-        } else if (!d1) {
-            selectedData = d0;
-        } else {
-            selectedData = x0 - d0.time > d1.time - x0 ? d1 : d0;
-        }
-
+        const selectedData = (!d0) ? d1 : (!d1) ? d0 : (x0 - d0.time > d1.time - x0 ? d1 : d0);
         if (!selectedData) return;
         focus.attr("cx", xScale(selectedData.time)).attr("cy", yScale(selectedData.price));
         focusText.text(`$${selectedData.price.toFixed(2)}`)
@@ -184,8 +152,35 @@ async function loadStock(symbol) {
         focusText.style("opacity", 0);
       });
 
-    //this is to avoid overcalling the api (30 call per second max)
-    updateInterval = setInterval(async () => {
+    function updateChart(newPrice) {
+      const now = new Date();
+      data.push({ time: now, price: newPrice });
+      if (data.length > MAX_POINTS) data.shift();
+
+      xScale.domain(d3.extent(data, d => d.time));
+      yScale.domain([
+        d3.min(data, d => d.price) * 0.98,
+        d3.max(data, d => d.price) * 1.02
+      ]);
+
+      path.datum(data)
+        .transition()
+        .duration(500)
+        .ease(d3.easeLinear)
+        .attr("d", line);
+
+      xAxisGroup.call(d3.axisBottom(xScale));
+      yAxisGroup.call(d3.axisLeft(yScale));
+
+      updateCard(newPrice, now);
+    }
+
+    await fetchCompanyProfile();
+    await fetchEarningsCalendar();
+    await fetchCompanyNews(symbol);
+
+    //make sure we get data quoting at reasonable times
+    async function pollQuote() {
       try {
         const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_TOKEN}`);
         const json = await res.json();
@@ -193,14 +188,18 @@ async function loadStock(symbol) {
       } catch (err) {
         console.error("Error fetching quote:", err);
       }
-    }, 1000);
+    }
+
+    pollQuote(); //starts loop
+    updateInterval = setInterval(pollQuote, UPDATE_INTERVAL); //repeat every 5 seconds
 
   } catch (err) {
-    console.error("Error fetching stock data:", err);
+    console.error("Error loading stock:", err);
   }
 }
 
-//This is for auto completion of companies
+
+//this is for auto completion of companies
 const input = document.getElementById("company-input");
 const datalist = document.getElementById("company-list");
 
@@ -227,13 +226,13 @@ input.addEventListener("input", async () => {
   }
 });
 
-//If user selects item in drop down switches to said security
+//if user selects item in drop down switches to said security
 input.addEventListener("change", () => {
   document.getElementById("fetch_data_button").click();
 });
 
 
-//This gets company news
+//this gets company news
 async function fetchCompanyNews(symbol) {
   try {
     let card = document.getElementById("news");
