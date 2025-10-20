@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
+    <link rel="icon" href="resources/images/bubble-tea.png" type="image/png">
+    <title>Stonkly 💸</title>
+    <style>
+        #link0 {
+            margin-left: 40px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #link0:hover {
+            color: #8f5a26;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1 class="title">
+            <a href="#" id="link0"> STONKLY💸</a>
+        </h1>
+        <ul>
+            <li><a href="#" id="link1" class="nav-button">HOME</a></li>
+            <li><a href="#" id="link2" class="nav-button">COMPANY ANALYZER</a></li>
+            <li><a href="#" id="link2" class="nav-button">PREDICTIONS</a></li>
+            <li><a href="#" id="link3" class="nav-button">ABOUT US</a></li>
+            <li><a href="#" id="link4" class="nav-button">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1 style="font-size: 3rem;">Predictions</h1>
+    </header>
+    <section id="gallery">
+        <h1>Prediction Graph</h1>
+        <select id="company-selector">
+            <option value="option1">Company A</option>
+            <option value="option2">Company B</option>
+            <option value="option3">Company C</option>
+        </select>
+        <div id="chart-container">
+            <img id="chart" width="800" height="400" src="./resources/images/predictions-placeholder.png">
+            <div id="cardAdd">
+                <div class="card">
+                    <h3>Company Name</h3>
+                    <p>Price: $?.??</p>
+                    <p>Stock Velocity: ?.??($/Hour)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p>&copy; 2025 Gatcha!. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
