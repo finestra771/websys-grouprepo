@@ -107,18 +107,21 @@ canvas {
   padding-top: 7%;
   padding-right: 2em;
   padding-left: 2em;
+  font-size: large;
 }
 
 #featureList {
+  justify-content: center;
   background-color: #ffffff;
   width: 40%;
   border-radius: 30px;
   text-align: center;
-  padding-top: 8em;
+  padding-top: 6em;
   padding-right: 2em;
   padding-left: 2em;
+  font-size: large;
 }
 
-#featureList ul {
+#featureList > ul {
   list-style-type: none;
 }
