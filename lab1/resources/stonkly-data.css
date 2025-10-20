@@ -235,3 +235,18 @@ header {
     cursor: pointer;
     margin-left: 10px;
 }
+
+#stonkly-info {
+    background-color: #f5e4be;
+}
+
+#link0 {
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#link0:hover {
+    color: #8f5a26;
+    cursor: pointer;
+}
