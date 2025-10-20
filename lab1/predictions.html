@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
+    <link rel="icon" href="resources/images/bubble-tea.png" type="image/png">
+    <title>Stonkly 💸</title>
+    <style>
+        #link0 {
+            margin-left: 40px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #link0:hover {
+            color: #8f5a26;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-dropdown-toggle {
+            background-color: #B87432;
+            color: white;
+            font-family: 'Monarch_Bold', Arial, sans-serif;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .custom-dropdown-toggle::after {
+            content: " ▼";
+            font-size: 0.7em;
+        }
+
+        .custom-dropdown-menu {
+            background-color: #F3DFCB;
+            border: 1px solid #B87432;
+            border-radius: 5px;
+            padding: 0;
+            margin: 5px 0 0;
+            list-style: none;
+            min-width: 200px;
+        }
+
+        .custom-dropdown-item {
+            color: #B87432;
+            font-family: 'Monarch_Bold', Arial, sans-serif;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .custom-dropdown-item:hover {
+            background-color: #B87432;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1 class="title">
+            <a href="#" id="link0"> STONKLY💸</a>
+        </h1>
+        <ul>
+            <li><a href="#" id="link1" class="nav-button">HOME</a></li>
+            <li><a href="#" id="link2" class="nav-button">COMPANY ANALYZER</a></li>
+            <li><a href="#" id="link2" class="nav-button">PREDICTIONS</a></li>
+            <li><a href="#" id="link3" class="nav-button">ABOUT US</a></li>
+            <li><a href="#" id="link4" class="nav-button">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1 style="font-size: 3rem;">Predictions</h1>
+        <div class="vertical-line"></div>
+        <h3>Estimated Trajectories for Tracked Stocks</h3>
+    </header>
+    <section id="gallery">
+        <h1>Prediction Graph</h1>
+
+        <div class="custom-dropdown" id="company-selector">
+            <button class="custom-dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                Select a Company
+            </button>
+            <ul class="custom-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="custom-dropdown-item dropdown-item" href="#" data-company="Company A">Company A</a></li>
+                <li><a class="custom-dropdown-item dropdown-item" href="#" data-company="Company B">Company B</a></li>
+                <li><a class="custom-dropdown-item dropdown-item" href="#" data-company="Company C">Company C</a></li>
+            </ul>
+        </div>
+
+        <div id="chart-container">
+            <img id="chart" width="800" height="400" src="./resources/images/predictions-placeholder.png">
+            <div id="cardAdd">
+                <div class="card">
+                    <h3>Company Name</h3>
+                    <p>Price: $?.??</p>
+                    <p>Stock Velocity: ?.??($/Hour)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p>&copy; 2025 Gatcha!. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="resources/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownItems = document.querySelectorAll('.custom-dropdown-item');
+            const dropdownButton = document.getElementById('dropdownMenuButton');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', (event) => {
+                    event.preventDefault(); // ✅ Prevent jump to top
+
+                    const companyName = item.getAttribute('data-company');
+                    dropdownButton.textContent = companyName; // ✅ Update button text
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
