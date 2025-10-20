@@ -332,3 +332,28 @@ header {
   95%  { margin-top: -75px; }
   100% { margin-top: 0; }
 }
+
+/* Formatting for company data section */
+#company-logo{
+  aspect-ratio: 1/1;
+  width: 80px;
+}
+
+#summary-container, #terminology, #peers-container {
+  justify-items: center;
+}
+
+#summary-container .card {
+  width: 80em;
+  text-align: justify;
+}
+
+#terminology .card {
+  width: 80em;
+  text-align: justify;
+}
+
+#peers-container .card {
+  width: 80em;
+  text-align: justify;
+}

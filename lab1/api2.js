@@ -7,7 +7,7 @@ let updateInterval = null;
 document.getElementById("fetch_data_button").addEventListener("click", async () => {
   symbol = document.getElementById("company-input").value.trim().toUpperCase();
   if (!symbol) return;
-  await loadStock(symbol);
+  await loadInfo(symbol);
 });
 
 document.getElementById("company-input").addEventListener("keypress", e => {
@@ -22,12 +22,21 @@ async function loadInfo(symbol){
   console.log(`looking at ${symbol}'s data`);
   companyData.innerHTML = "";
 
-  let card = document.createElement("div");
-  card.className = "card";
-  companyData.appendChild(card);
-  card.innerHTML = `<h3>${symbol}</h3>`;
+  let profileCard = document.createElement("div");
+  profileCard.className = "card";
+  companyData.appendChild(profileCard);
+  profileCard.innerHTML = `<h3>${symbol}</h3>`;
+
+  const peerData = document.getElementById('peers-container');
+  peerData.innerHTML = "";
+
+  let peerCard = document.createElement("div");
+  peerCard.className = "card";
+  peerData.appendChild(peerCard);
+  peerCard.innerHTML = "";
 
   let companyProfile = {};
+  let companyPeers = {};
 
   async function fetchCompanyProfile(){
     try{
@@ -38,24 +47,45 @@ async function loadInfo(symbol){
     }
   }
 
-  function updateCard(){
-    console.log("updating...");
-    card.innerHTML = `
+  function updateProfileCard(){
+    num = companyProfile.phone.match(/^(\d{1})(\d{3})(\d{3})(\d{4})$/);
+    phone = '+' + num[1] + ' (' + num[2] + ') ' + num[3] + '-' + num[4]; 
+
+    profileCard.innerHTML = `
+      <img id="company-logo" src="${companyProfile.logo}" alt="${symbol}-logo">
       <h3>${companyProfile.name || symbol}</h3>
-      <img src="${companyProfile.logo}" alt="${symbol}-logo">
       <p>Based in the ${companyProfile.country}</p>
       <p>Industry: ${companyProfile.finnhubIndustry}</p>
       <p>Inital Public Offering (IPO)*: ${companyProfile.ipo}</p>
       <p>Listed Exchange**: ${companyProfile.exchange}</p>
       <p>Market Capitalization***: ${companyProfile.marketCapitalization}</p>
       <p>Outstanding Shares****: ${companyProfile.shareOutstanding}</p>
-      <p>Phone number: ${companyProfile.phone}</p>
+      <p>Phone number: ${phone}</p>
       <a href="${companyProfile.weburl}">See their website</a>
       `;
   }
 
+  async function fetchCompanyPeers(){
+    try{
+      const res = await fetch(`https://finnhub.io/api/v1/stock/peers?symbol=${symbol}&token=${FINNHUB_TOKEN}`);
+      companyPeers = await res.json();
+    } catch(err){
+      console.error("Error fetching company peers:", err);
+    }
+  }
+
+  function updatePeerCard(){
+    peerCard.innerHTML = "<h3>Industry Peers</h3>";
+    for(let i = 0; i < companyPeers.length; i++){
+      peerCard.innerHTML += `<p>${companyPeers[i]}</p>`;
+    }
+  }
+
   await fetchCompanyProfile();
-  updateCard();
+  updateProfileCard();
+
+  await fetchCompanyPeers();
+  updatePeerCard();
 }
 
 //this is for auto completion of companies
