@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/stonkly.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <link rel="icon" href="resources/images/bubble-tea.png" type="image/png">
+    <title>Stonkly 💸</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1 class="title">
+            <a href="#" id="link0"> STONKLY💸</a>
+        </h1>
+        <ul>
+            <li><a href="#" id="link1" class="nav-button">HOME</a></li>
+            <li><a href="stonkly-data.html" class="nav-button">COMPANIES</a></li>
+            <li><a href="#" class="nav-button">PREDICTIONS</a></li> <!-- oliver will do this -->
+            <li><a href="#" id="link2" class="nav-button">OUR MISSION</a></li>
+            <li><a href="#" class="nav-button">CONTACTS</a></li> <!-- somey will do this -->
+        </ul>
+    </nav>
+
+    <header id="home">
+        <canvas id="stockCanvas"></canvas>
+        <div id = titleStart>
+            <div id=container>
+                <div id=flip>
+                    <div>✦ STONKLY ✦</div>
+                    <div> Stock Market</div>
+                    <div> Global News</div>
+                </div>
+            </div>
+            <h2>99% of Gamblers Quit Before they Win Big.</h2>
+            <h3>Be the 1% that Wins Big!</h3>
+        </div>
+    </header>
+    <script>
+        const canvas = document.getElementById("stockCanvas");
+        const ctx = canvas.getContext("2d");
+
+        //this is to adjust for difference window sizes
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        const brown = "#8B4513";
+        const points = [];
+        let x = 0;
+        let y = canvas.height * (0.67 + 0.03); //this was unplanned i swear
+
+        function draw() {
+            //make sure background is white
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            //this gets the random movement of points
+            x += 10;
+            y -= Math.random() * 8 - 2;
+
+            //make sure it doesn't go off canvas
+            if (y < canvas.height * 0.2) y = canvas.height * 0.8;
+
+            //reset when you reach right side
+            if (x > canvas.width) {
+                x = 0;
+                y = canvas.height * 0.7;
+                points.length = 0;
+            }
+
+            //add to list
+            points.push({ x, y });
+
+            //this draws line
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = brown;
+            ctx.shadowBlur = 0;      
+            ctx.shadowColor = "transparent"; 
+
+            //go through each points and give animation
+            for (let i = 0; i < points.length; i++) {
+                const p = points[i];
+                if (i === 0) ctx.moveTo(p.x, p.y);
+                else ctx.lineTo(p.x, p.y);
+            }
+
+            ctx.stroke();
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+
+    <section id="stonkly-info">
+        <section class="hero" id="top">
+            <h1 class="page-title">Company Stock Data</h1>
+            <p class="subtle">Quickly jump into our analyzer to explore a company’s stock data.</p>
+        </section>
+
+        <section id="what" class="section">
+            <h2>What is Stonkly?</h2>
+            <p class="subtle" style="text-align:left;max-width:800px">
+            <strong>Stonkly</strong> is a student-built finance site that helps you understand how stock moves quickly.
+            Type a ticker, get a clean price history, compare symbols side-by-side, and skim headlines for context —
+            all in one place. It’s built for <em>beginners and busy students</em>: simple charts, minimal settings, and
+            short explainers so you learn as you go. Data comes from public APIs (e.g., Finnhub) and the UI is light
+            enough to run smoothly on a typical student laptop.
+            </p>
+
+            <div class="panel" style="margin-top:12px">
+            <strong>What you’ll get</strong>
+            <ul class="contact-list" style="margin-top:8px">
+                <li>Fast ticker lookup with readable charts</li>
+                <li>Quick comparisons to spot trends</li>
+                <li>Headline context next to price moves</li>
+                <li>Short definitions for common indicators</li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="why" class="section">
+            <h2>Why we built it</h2>
+            <div class="panel">
+                <p class="subtle" style="text-align:left;max-width:800px">
+                    We’re Finance Group 13 (Gatcha!) for ITWS 2110. We wanted a project that blends
+                    <strong>web systems</strong> with <strong>real-world data</strong> and is actually useful for students.
+                    Most finance sites are overloaded with features; Stonkly keeps the signal and drops the noise.
+                </p>
+                <ul class="contact-list" style="margin-top:8px">
+                    <li><strong>Learn by doing:</strong> pull live data, render it, interact with it.</li>
+                    <li><strong>Clarity first:</strong> clean visuals and one-sentence explainers.</li>
+                    <li><strong>Open source:</strong> classmates can read and improve the code.</li>
+                    <li><strong>Portable:</strong> lightweight front end that runs anywhere.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="analyzer" class="section">
+            <div class="panel" style="text-align:center">
+                <p class="subtle" style="margin-bottom:12px">
+                    Open the analyzer to search tickers, view charts, and see key context.
+                </p>
+                <a class="btn" href="app.html">Open Company Analyzer →</a>
+            </div>
+        </section>
+    </section>
+
+    <footer id="contacts">
+        <p>&copy; 2025 Gatcha!. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="resources/jquery-3.7.1.min.js"></script>
+    <script src="resources/scroll.js"></script>
+
+
+</body>
+
+</html>

@@ -30,14 +30,14 @@ $(document).ready(() => {
     $('#link2').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#gallery').offset().top - 100
+            scrollTop: $('#stonkly-info').offset().top - 100
         }, 700);
     });
 
     $('#link3').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#about-us').offset().top
+            scrollTop: $('#about-us').offset().top   //update to why we build this
         }, 700);
     });
 

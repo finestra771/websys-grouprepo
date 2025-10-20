@@ -1,0 +1,24 @@
+<body>
+
+    <section id="gallery"> 
+        <h1 style="font-size: 2.7rem; margin-top: -10px; margin-left: 60px;">Company Stock Data</h1>
+        <div class="search-bar">
+            <input list="company-list" id="company-input" placeholder="Enter Security (e.g., AAPL)">
+            <datalist id="company-list"></datalist>
+            <button id="fetch_data_button">Fetch Data</button>
+        </div>
+        
+        <div id="chart-container">
+            <svg id="chart" width="800" height="400"></svg>
+            <div id="cardAdd"></div>
+        </div>
+        
+        <div class="ticker-container">
+            <div class="ticker-content" id="news"></div>
+        </div>
+    </section>
+    
+    <script src="resources/jquery-3.7.1.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="api.js"></script>
+</body>
