@@ -1,3 +1,10 @@
+@font-face{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  src: url('../fonts/Monarch_Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 #stonkly-info {
     background-color: #f5e4be;
 }
@@ -76,26 +83,49 @@ canvas {
 
 /* Stonkly Info Section */
 #block {
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 9em;
 }
 
 #stonkly-info {
+  height: 50em;
   padding-top: 10px;
 }
 
 #infoBlock {
   background-color: #ffffff;
   width: 40%;
+  height: 20em;
   border-radius: 30px;
-  margin-right: 50px;
+  margin-right: 5em;
+  text-align: center;
+  padding-top: 7%;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
 #featureList {
   background-color: #ffffff;
   width: 40%;
   border-radius: 30px;
+  text-align: center;
+  padding-top: 8em;
+}
+
+#featureList ul {
+  list-style-type: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
 }
