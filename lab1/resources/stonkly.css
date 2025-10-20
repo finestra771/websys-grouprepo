@@ -115,17 +115,10 @@ canvas {
   border-radius: 30px;
   text-align: center;
   padding-top: 8em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
 #featureList ul {
   list-style-type: none;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
 }
