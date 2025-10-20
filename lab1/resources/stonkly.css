@@ -1,3 +1,10 @@
+@font-face{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  src: url('../fonts/Monarch_Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 #stonkly-info {
     background-color: #f5e4be;
 }
@@ -72,4 +79,96 @@ canvas {
   75%  { margin-top: -75px; }
   95%  { margin-top: -75px; }
   100% { margin-top: 0; }
+}
+
+/* Stonkly Info Section */
+#block {
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+
+#stonkly-info {
+  height: 50em;
+  padding-top: 10px;
+}
+
+#infoBlock {
+  background-color: #ffffff;
+  width: 40%;
+  height: 20em;
+  border-radius: 30px;
+  margin-right: 5em;
+  text-align: center;
+  padding-top: 3%;
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: large;
+}
+
+#featureList {
+  justify-content: center;
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 3%;
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: large;
+}
+
+#featureList > ul {
+  list-style-type: none;
+  text-align: left;
+  margin-left: 4em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ce7f26;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(126, 91, 51); 
+  border-radius: 10rem;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
 }

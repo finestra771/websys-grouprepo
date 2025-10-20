@@ -30,7 +30,7 @@ $(document).ready(() => {
     $('#link2').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#stonkly-info').offset().top - 100
+            scrollTop: $('#stonkly-info').offset().top - 50
         }, 700);
     });
 
