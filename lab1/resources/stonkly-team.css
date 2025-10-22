@@ -1,0 +1,10 @@
+
+#about-us {
+    padding: 60px 20px;
+    background-color:#F3DFCB;
+    display: grid;
+}
+
+.team-description {
+    width: 75%;
+}
