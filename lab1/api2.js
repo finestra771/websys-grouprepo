@@ -53,7 +53,7 @@ async function loadInfo(symbol){
 
     profileCard.innerHTML = `
       <img id="company-logo" src="${companyProfile.logo}" alt="${symbol}-logo">
-      <h3>${companyProfile.name || symbol}</h3>
+      <h1>${companyProfile.name || symbol}</h1>
       <p>Based in the ${companyProfile.country}</p>
       <p>Industry: ${companyProfile.finnhubIndustry}</p>
       <p>Inital Public Offering (IPO)*: ${companyProfile.ipo}</p>
@@ -76,9 +76,11 @@ async function loadInfo(symbol){
 
   function updatePeerCard(){
     peerCard.innerHTML = "<h3>Industry Peers</h3>";
+    peerCard.innerHTML += `<p>`
     for(let i = 0; i < companyPeers.length; i++){
-      peerCard.innerHTML += `<p>${companyPeers[i]}</p>`;
+      peerCard.innerHTML += `${companyPeers[i]}    `;
     }
+    peerCard.innerHTML += `</p>`;
   }
 
   await fetchCompanyProfile();
