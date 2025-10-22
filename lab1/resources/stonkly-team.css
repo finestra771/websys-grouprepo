@@ -5,6 +5,10 @@
     display: grid;
 }
 
+#home {
+    height: 75vh;
+}
+
 .team-description {
     width: 75%;
 }
