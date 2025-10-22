@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/styles.css">
+    <link rel="stylesheet" href="resources/companies.css">
     <link rel="icon" href="resources/images/bubble-tea.png" type="image/png">
     <title>Stonkly 💸</title>
     <style>
@@ -117,10 +118,10 @@
       draw();
   </script>
 
-  <section id="gallery"> 
+  <section id="company-gallery"> 
       <h1 style="font-size: 2.7rem; margin-top: -10px; margin-left: 60px;">Company Data</h1>
       <div class="search-bar">
-        <input list="company-list" id="company-input" placeholder="Enter Security (e.g., AAPL)">
+        <input list="company-list" id="company-input" class="form-control search-input" placeholder="Enter Security (e.g., AAPL)">
         <datalist id="company-list"></datalist>
         <button id="fetch_data_button">Fetch Data</button>
       </div>
