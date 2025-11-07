@@ -64,37 +64,37 @@
     "labs": [
         {
             "lab_id": 1,
-            "title": "Lab 1: Group & Personal Portfolio Website",
+            "title": "Group & Personal Portfolio Website",
             "description": "In this lab, you will build a group portfolio landing page and individual résumé pages using semantic HTML, CSS, and optional JavaScript, apply hCard microformats to your contact information, and host everything on GitHub with a detailed README documenting your work and sources."
         },
         {
             "lab_id": 2,
-            "title": "Lab 2: Interactive U.S. Constitution Web App",
+            "title": "Interactive U.S. Constitution Web App",
             "description": "In this lab, you will build a semantic, fully styled web app that presents the text of the U.S. Constitution, annotates key Articles and Amendments with your own analysis and historical context, highlights its modern relevance, properly credits any images, and documents your work and sources in an individual README."
         },
         {
             "lab_id": 3,
-            "title": "Lab 3: JavaScript, AJAX, JSON, and APIs",
+            "title": "JavaScript, AJAX, JSON, and APIs",
             "description": "In this lab, you will build an individual web app that uses JavaScript and AJAX to fetch and display JSON data from the OpenWeatherMap API (for Troy, NY) and a second free API of your choice, creatively present and manipulate the returned data with HTML/CSS/Bootstrap/jQuery, and thoroughly document and cite all sources in a README (with optional extra credit for using HTML5 Geolocation)."
         },
         {
             "lab_id": 4,
-            "title": "Lab 4: Rebuilding Your Web App Using Generative AI",
+            "title": "Rebuilding Your Web App Using Generative AI",
             "description": "In this lab, you will recreate your Lab 3 project using only AI-generated assets (code, text, and images), maintain a detailed log of all prompts used, and write a reflection on the limitations and challenges of depending entirely on tools like ChatGPT for web development."
         },
         {
             "lab_id": 5,
-            "title": "Lab 5: Using Bloomberg Terminal Data to Enhance Stonkly",
+            "title": "Using Bloomberg Terminal Data to Enhance Stonkly",
             "description": "In this lab, you explore how Bloomberg Terminal’s real-time financial data, supply chain information, and professional IB chats could expand your group’s Stonkly ETF analysis web app, and reflect on a hands-on visit to the Bloomberg Lab that highlights the importance of fast navigation and clean data access for your Websys project."
         },
         {
             "lab_id": 6,
-            "title": "Lab 6: Object-Oriented PHP Calculator",
+            "title": "Object-Oriented PHP Calculator",
             "description": "In this lab, you will build a web-based calculator in PHP using object-oriented programming (classes, objects, and methods) along with HTML forms and POST/GET handling to perform arithmetic operations and display results in the browser."
         },
         {
             "lab_id": 7,
-            "title": "Lab 7: Spooky LMS with MySQL, JSON, and PHP",
+            "title": "Spooky LMS with MySQL, JSON, and PHP",
             "description": "In this lab, you will work in groups to recreate a Halloween-themed LMS by designing MySQL tables for courses, students, and grades; inserting and querying data; creating a JSON document describing all Websys lectures and labs; storing that JSON in the database; and building a PHP-driven front end and back end to browse and archive the course contents."
         }
 
