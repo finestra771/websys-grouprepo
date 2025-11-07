@@ -1,0 +1,37 @@
+{
+    "lectures": [
+        {
+              "lecture_id": 1,
+              "title": "Introduction to Machine Learning",
+              "description": "This lecture covers the basics of machine learning, including types of learning and common algorithms."
+        },
+        {
+            "lecture_id": 2,
+            "title": "Supervised Learning",
+            "description": "This lecture focuses on supervised learning techniques, including regression and classification."
+        },
+        {
+            "lecture_id": 3,
+            "title": "Unsupervised Learning",
+            "description": "This lecture covers unsupervised learning methods, such as clustering and dimensionality reduction."
+        }
+    ],
+    "labs": [
+        {
+            "lab_id": 1,
+            "title": "Lab 1: Data Preprocessing",
+            "description": "In this lab, you will learn how to preprocess data for machine learning."
+        },
+        {
+            "lab_id": 2,
+            "title": "Lab 2: Model Training",
+            "description": "In this lab, you will train a machine learning model using a dataset."
+        },
+        {
+            "lab_id": 3,
+            "title": "Lab 3: Model Evaluation",
+            "description": "In this lab, you will evaluate the performance of your machine learning model."
+        }
+    ]
+
+}
