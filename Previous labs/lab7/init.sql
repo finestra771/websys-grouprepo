@@ -17,6 +17,13 @@ CREATE table IF not exists `lab7`.`students`(
     `phone` int(10)
 );
 
+CREATE table IF not exists `lab7`.grades(
+    `ID` int(11) PRIMARY KEY AUTO_INCREMENT,
+    CRN foreign key REFERENCES courses(crn),
+    RIn foreign key REFERENCES students(RIN),
+    grade int(3) NOT NULL
+);
+
 ALTER TABLE `lab7`.`students`
 ADD `street` VARCHAR(255),
 ADD `city` VARCHAR(100),
