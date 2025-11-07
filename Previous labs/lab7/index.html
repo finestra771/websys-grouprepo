@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sys Course</title>
+    <style>
+        @font-face {
+            font-family: BloodyModes;
+             src: url(BloodyModes-gwwYp.ttf);
+        }
+        body {
+            font-family: BloodyModes;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #container {
+            display: flex;
+            flex: 1;
+        }
+        #sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+        #preview {
+            flex: 1;
+            padding: 20px;
+        }
+        #lecture-header, #lab-header {
+            background-color: rgb(124, 85, 38);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        #lab-content, #lecture-content {
+            list-style-type: none;
+            padding: 0;
+        }
+        #lab-content li, #lecture-content li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        #lab-content li:hover, #lecture-content li:hover {
+            background-color: #e0e0e0;
+        }
+        #refresh-button {
+            border-radius: 10px;
+            width: 100px;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 20px;
+            background-color: darkorange;
+            text-align: center;
+        }
+        #refresh-button:hover {
+            background-color: rgb(226, 126, 3);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <h1>Spooky Web Sys 🪦</h1>
+        <div id="refresh-button">Refresh</div>
+    </nav>
+
+    <div id="container">
+        <nav id="sidebar">
+            <div id="lecture-header">Lectures:</div>
+            <ul id="lecture-content">
+                <!-- Dynamically populated list of lectures and labs -->
+                <li data-title="Lecture 1" data-description="Introduction to Web Systems">Lecture 1</li>
+                <li data-title="Lecture 2" data-description="Advanced Web Development">Lecture 2</li>
+                <li data-title="Lecture 3" data-description="Introduction to Web Systems">Lecture 3</li>
+                <li data-title="Lecture 4" data-description="Advanced Web Development">Lecture 4</li>
+            </ul>
+            <div id="lab-header">Labs:</div>
+            <ul id="lab-content">   
+                <!-- Dynamically populated list of labs -->
+                <li data-title="Lab 1" data-description="Setting up your environment">Lab 1</li>
+                <li data-title="Lab 2" data-description="Building your first web app">Lab 2</li>
+                <li data-title="Lab 3" data-description="Database integration">Lab 3</li>
+                <li data-title="Lab 4" data-description="Deploying your application">Lab 4</li>
+            </ul>
+        </nav>
+        <main id="preview">
+            <h2 id="item-title">Select an item to see details</h2>
+            <div id="item-description">
+                <h2>Lecture Title</h2>
+                <p>Lecture Description</p>  
+                <p>Additional Information/Details</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
