@@ -63,7 +63,9 @@ VALUES (1, 73048, 661234567, 90),
 
 -- List all students in the following sequences; in lexicographical order by RIN, last name, RCSID, and first name. Remember that lexicographical order is determined by your collation.
 SELECT * FROM `students` ORDER BY `RIN` ASC;
+SELECT * FROM `students` ORDER BY `RCSID` ASC;
 SELECT * FROM `students` ORDER BY `last_name` ASC;
+SELECT * FROM `students` ORDER BY `first_name` ASC;
 
 -- 8. List all students RIN, name, and address if their grade in any course was higher than a 90
 SELECT
