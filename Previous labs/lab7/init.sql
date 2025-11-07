@@ -5,7 +5,7 @@ CREATE table If NOT EXISTS lab7.courses(
     prefix VARCHAR(4) NOT NULL,
     number SMALLINT(4) NOT NULL,
     title VARCHAR(255) NOT NULL
-)
+);
 
 CREATE table IF not exists lab7.students(
     RIN int(9) PRIMARY Key,
@@ -14,7 +14,7 @@ CREATE table IF not exists lab7.students(
     last_name varchar(100) NOT NULL,
     alias varchar(100) NOT NULL,
     phone int(10)
-)
+);
 
 ALTER TABLE lab7.students
 ADD street VARCHAR(255),
