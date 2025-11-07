@@ -93,3 +93,16 @@ FROM lab7.courses c
 LEFT JOIN lab7.grades g ON c.crn = g.CRN
 GROUP BY c.crn, c.prefix, c.number, c.title
 ORDER BY c.crn;
+
+-- PART 3
+CREATE TABLE IF NOT EXISTS `lab7`.`lectures`(
+    `lecture_id` INT(11) PRIMARY KEY AUTO_INCREMENT,
+    `title` VARCHAR(255) NOT NULL,
+    `description` TEXT NOT NULL
+)
+
+CREATE TABLE IF NOT EXISTS `lab7`.`labs`(
+    `lab_id` INT(11) PRIMARY KEY AUTO_INCREMENT,
+    `title` VARCHAR(255) NOT NULL,
+    `description` TEXT NOT NULL
+);
