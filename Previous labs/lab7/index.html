@@ -58,7 +58,7 @@
         #lab-content li:hover, #lecture-content li:hover {
             background-color: #e0e0e0;
         }
-        #refresh-button {
+        #archive-button, #refresh-button {
             border-radius: 10px;
             width: 100px;
             bottom: 20px;
@@ -68,7 +68,7 @@
             background-color: darkorange;
             text-align: center;
         }
-        #refresh-button:hover {
+        #archive-button:hover, #refresh-button:hover {
             background-color: rgb(226, 126, 3);
             cursor: pointer;
         }
@@ -77,7 +77,11 @@
 <body>
     <nav id="header">
         <h1>Spooky Web Sys 🪦</h1>
-        <div id="refresh-button">Refresh</div>
+        <div style="display: flex; gap: 10px;">
+            <div id="archive-button">Archive</div>
+            <div id="refresh-button">Refresh</div>
+        </div>
+        
     </nav>
 
     <div id="container">
