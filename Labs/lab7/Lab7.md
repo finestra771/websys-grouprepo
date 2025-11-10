@@ -23,7 +23,7 @@
 Overall, this lab was a big refresher on using MySQL with PHP. While I vaguely remember a lot of the steps from Intro to ITWS, I had also forgotten a lot of the syntax so it was nice to go back through my old notes from Intro and figure out how to set up a SQL query in PHP so that the database got updated with new information. The main struggle I had was figuring out how to send information from JavaScript to PHP, in which case I was lucky enough to find an article on how the fetch API could be used to send data from JavaScript to PHP in the form of a JSON.  
 
 ### Zhimin Jiang
-
+During this lab, I was responsible for building the JSON document that lists all of the Websys lectures and labs. I had to go back through the course materials to track down each individual lecture and lab, carefully summarize its main purpose in a short description, and make sure everything was included and consistently formatted so it would work correctly with our PHP/MySQL setup. This was time-consuming and easy to mess up, but it helped me understand how all the pieces of the course fit together.
 
 ## Accessing the Database (Locally)
   - Import "test.sql" into PHPMYADMIN to create the database, the tables in it, and the data stored in the database. 
