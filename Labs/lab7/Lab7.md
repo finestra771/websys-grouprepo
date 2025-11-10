@@ -19,6 +19,7 @@
 
 ### Dathan Lang
   I helped implement the CSS and general graphical layout of the website by creating the index.html page for our spooky lms. I notably imported a special character font to invoke a more halloween-themed feel and also uses flex-boxing to align data elements. I also helped the generic styling so that my other team members could easily build around my design to dynamically add classes and labs. I also used internal css to speed-up load time since I know PHP and ajax can have slow loading speeds.
+  
 ### Lala Liu
 Overall, this lab was a big refresher on using MySQL with PHP. While I vaguely remember a lot of the steps from Intro to ITWS, I had also forgotten a lot of the syntax so it was nice to go back through my old notes from Intro and figure out how to set up a SQL query in PHP so that the database got updated with new information. The main struggle I had was figuring out how to send information from JavaScript to PHP, in which case I was lucky enough to find an article on how the fetch API could be used to send data from JavaScript to PHP in the form of a JSON.  
 
