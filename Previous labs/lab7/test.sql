@@ -1,41 +1,41 @@
 CREATE DATABASE IF NOT EXISTS `lab7`;
 USE `lab7`;
 
-CREATE table If NOT EXISTS `lab7`.`courses`(
-    `crn` INT(11) PRIMARY KEY,
-    `prefix` VARCHAR(4) NOT NULL,
-    `number` SMALLINT(4) NOT NULL,
-    `title` VARCHAR(255) NOT NULL
+CREATE table If NOT EXISTS courses(
+    crn INT(11) PRIMARY KEY,
+    prefix VARCHAR(4) NOT NULL,
+    number SMALLINT(4) NOT NULL,
+    title VARCHAR(255) NOT NULL
 );
 
-CREATE table IF not exists `lab7`.`students`(
-    `RIN` int(9) PRIMARY Key,
-    `RCSID` char(7),
-    `first_name` varchar(100) NOT NULL,
-    `last_name` varchar(100) NOT NULL,
-    `alias` varchar(100) NOT NULL,
-    `phone` int(10)
+CREATE table IF not exists students(
+    RIN int(9) PRIMARY Key,
+    RCSID char(7),
+    first_name varchar(100) NOT NULL,
+    last_name varchar(100) NOT NULL,
+    alias varchar(100) NOT NULL,
+    phone int(10)
 );
 
 
-CREATE TABLE IF NOT EXISTS `lab7`.`grades` (
-    `ID` int(11) PRIMARY KEY AUTO_INCREMENT,
-    `CRN` int(11) NOT NULL,
-    `RIN` int(9) NOT NULL,
-    `grade` int(3) NOT NULL,
-    FOREIGN KEY (`CRN`) REFERENCES `lab7`.`courses`(`crn`),
-    FOREIGN KEY (`RIN`) REFERENCES `lab7`.`students`(`RIN`)
+CREATE TABLE IF NOT EXISTS grades (
+    ID int(11) PRIMARY KEY AUTO_INCREMENT,
+    CRN int(11) NOT NULL,
+    RIN int(9) NOT NULL,
+    grade int(3) NOT NULL,
+    FOREIGN KEY (CRN) REFERENCES courses(crn),
+    FOREIGN KEY (RIN) REFERENCES students(RIN)
 );
 
-ALTER TABLE `lab7`.`students`
-ADD `street` VARCHAR(255),
-ADD `city` VARCHAR(100),
-ADD `state` CHAR(2),
-ADD `zip` CHAR(10);
+ALTER TABLE students
+ADD street VARCHAR(255),
+ADD city VARCHAR(100),
+ADD state CHAR(2),
+ADD zip CHAR(10);
 
-ALTER TABLE `lab7`.`courses`
-ADD `section` INT(4) NOT NULL,
-ADD `year` VARCHAR(6) NOT NULL;
+ALTER TABLE courses
+ADD section INT(4) NOT NULL,
+ADD year VARCHAR(6) NOT NULL;
 
 INSERT INTO `courses`
 VALUES (73048, 'ITWS', 2110, 'Web Systems Development', 1, '2025'),
