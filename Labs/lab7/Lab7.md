@@ -9,7 +9,7 @@
   - Zhimin worked on Part 3, creating the JSON document that contains information about all the lectures and labs we have done so far.
 
 ### Jodie Cho
-
+During this lab, when I was writing the sql, it didn't work first because I was testing in the local mysql local benchmark, and it was only working when I used ` (backtick). When we were testing in local environment, in worked but when we were testing in php, it didn't work. Removing the backtick made it work in php.
 
 ### Oliver Crotty
 
