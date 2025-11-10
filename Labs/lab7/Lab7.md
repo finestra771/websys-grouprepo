@@ -18,8 +18,7 @@ During this lab, when I was writing the sql, it didn't work first because I was 
 
 
 ### Dathan Lang
-
-
+  I helped implement the CSS and general graphical layout of the website by creating the index.html page for our spooky lms. I notably imported a special character font to invoke a more halloween-themed feel and also uses flex-boxing to align data elements. I also helped the generic styling so that my other team members could easily build around my design to dynamically add classes and labs. I also used internal css to speed-up load time since I know PHP and ajax can have slow loading speeds.
 ### Lala Liu
 
 
@@ -41,3 +40,4 @@ During this lab, I was responsible for building the JSON document that lists all
 
 ## Resources
   - https://www.sitepoint.com/community/t/php-not-reading-post-data-sent-from-javascript-fetch/434652
+  - https://www.1001fonts.com/bloody-modes-font.html
