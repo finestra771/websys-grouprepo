@@ -12,7 +12,7 @@
 During this lab, when I was writing the sql, it didn't work first because I was testing in the local mysql local benchmark, and it was only working when I used ` (backtick). When we were testing in local environment, in worked but when we were testing in php, it didn't work. Removing the backtick made it work in php.
 
 ### Oliver Crotty
-
+For this lab I worked on filling the SQL database and creating the insert statements for a myriad of courses and sample student as well as sample grades for said students in the inserted classes. I had some difficulties setting up the sql server on my local device but after enough troubleshooting I managed to make it work.
 
 ### SoMey Dong
 For this lab I was in charge of the wireframe and creating the website design. I created the color pallete that invoked a spooky air with colors that are reminicent of Halloween. After the website was finished, I rechecked and changed some of the CSS to be more legible and ensure the visual weight of important subjects were easily legible.
