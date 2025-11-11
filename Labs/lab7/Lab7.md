@@ -15,7 +15,7 @@ During this lab, when I was writing the sql, it didn't work first because I was 
 
 
 ### SoMey Dong
-
+For this lab I was in charge of the wireframe and creating the website design. I created the color pallete that invoked a spooky air with colors that are reminicent of Halloween. After the website was finished, I rechecked and changed some of the CSS to be more legible and ensure the visual weight of important subjects were easily legible.
 
 ### Dathan Lang
   I helped implement the CSS and general graphical layout of the website by creating the index.html page for our spooky lms. I notably imported a special character font to invoke a more halloween-themed feel and also uses flex-boxing to align data elements. I also helped the generic styling so that my other team members could easily build around my design to dynamically add classes and labs. I also used internal css to speed-up load time since I know PHP and ajax can have slow loading speeds.
