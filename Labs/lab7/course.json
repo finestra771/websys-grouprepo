@@ -1,0 +1,103 @@
+{
+    "lectures": [
+        {
+              "lecture_id": 1,
+              "title": "Introduction to Web Systems Development",
+              "description": "This lecture introduces the Web Systems Development course, outlining the syllabus, tools and technologies used, grading and expectations, and the structure of labs and the semester-long group project. "
+        },
+        {
+            "lecture_id": 2,
+            "title": "Web & Network Basics and Development Environment Setup",
+            "description": "This lecture focuses on supervised learning techniques, including regression and classification."
+        },
+        {
+            "lecture_id": 3,
+            "title": "Introduction to CSS: Selectors, Box Model, and Page Layout",
+            "description": "This lecture introduces Cascading Style Sheets (CSS), explaining how to separate presentation from HTML structure using selectors, text and display properties, the box model, positioning, floats, and specificity to control webpage layout and appearance."
+        },
+        {
+            "lecture_id": 4,
+            "title": "Introduction to JavaScript: Language Basics, Objects, Functions, and the DOM",
+            "description": "This lecture introduces JavaScript as a client-side scripting language, covering its typing and execution model, variables and values, objects and arrays, functions and constructors, and how it interacts with the DOM and events to add interactivity to web pages following progressive enhancement principles."
+        },
+        {
+            "lecture_id": 5,
+            "title": "APIs and REST: Principles, Constraints, and Real-World Examples",
+            "description": "This lecture defines APIs and their benefits, contrasts SOAP and REST, explains REST’s core ideas (resources, representations, and the six constraints including statelessness, caching, and uniform interface/discoverability), and walks through real-world APIs like Facebook’s Graph API, X (Twitter), and OpenWeatherMap."
+        },
+        {
+            "lecture_id": 6,
+            "title": "AJAX & JSON: Asynchronous Web Requests and Data Interchange",
+            "description": "This lecture explains JSON as a lightweight, human-readable data format and AJAX (via XMLHttpRequest, jQuery, and fetch) as a way to make asynchronous HTTP requests, showing how combining them lets web pages dynamically load and display external data without reloading."
+        },
+        {
+            "lecture_id": 7,
+            "title": "Managing the Risks of Generative AI in Business",
+            "description": "This lecture outlines a practical framework for using generative AI responsibly in organizations—focusing on accuracy, safety, honesty, empowerment, and sustainability—and offers concrete guidance on data practices, human oversight, and ongoing testing to mitigate ethical, legal, and societal risks."
+        },
+        {
+            "lecture_id": 8,
+            "title": "Front-End Performance Optimization and UX Foundations",
+            "description": "This lecture explains how to speed up web applications—by reducing markup, HTTP requests, DNS lookups, and asset sizes; optimizing CSS, JavaScript, media, servers, and AJAX polling—and introduces the UX “honeycomb” (useful, usable, findable, credible, desirable, accessible, valuable) as a framework for designing user-centered products."
+        },
+        {
+            "lecture_id": 9,
+            "title": "PHP Functions, Objects, and Classes",
+            "description": "This lecture dives deeper into PHP by covering variables and data types, arrays, operators, control structures, user-defined functions (with arguments, default values, and return types), and introduces object-oriented programming concepts like classes, objects, constructors, methods, and inheritance, along with basic web input/output using superglobals."
+        },
+        {
+            "lecture_id": 10,
+            "title": "PHP & MySQL: PDO, Prepared Statements, and Sessions",
+            "description": "This lecture explains how to connect PHP to MySQL using PDO, manage database users securely, run queries and inserts (including prepared statements to prevent SQL injection), and use PHP sessions to maintain per-user state in otherwise stateless HTTP applications."
+        },
+        {
+            "lecture_id": 11,
+            "title": "Advanced PHP OOP: Interfaces, Abstract Classes, Overloading, and Traits",
+            "description": "This lecture deepens PHP object-oriented programming by explaining references and symbol tables, method overriding and (PHP-style) overloading via magic methods, access control (public/private/protected), and how interfaces, abstract classes, and traits enable polymorphism and code reuse in complex class hierarchies."
+        },
+        {
+            "lecture_id": 12,
+            "title": "Authentication & Authorization: Secure Logins, Passwords, and Access Control",
+            "description": "This lecture distinguishes authentication from authorization, shows how web apps use sessions, hashed and salted passwords, and HTTPS to protect logins, and explains permission-based, role-based, and combined database-driven schemes for controlling what different users are allowed to do."
+        }
+    ],
+    "labs": [
+        {
+            "lab_id": 1,
+            "title": "Group & Personal Portfolio Website",
+            "description": "In this lab, you will build a group portfolio landing page and individual résumé pages using semantic HTML, CSS, and optional JavaScript, apply hCard microformats to your contact information, and host everything on GitHub with a detailed README documenting your work and sources."
+        },
+        {
+            "lab_id": 2,
+            "title": "Interactive U.S. Constitution Web App",
+            "description": "In this lab, you will build a semantic, fully styled web app that presents the text of the U.S. Constitution, annotates key Articles and Amendments with your own analysis and historical context, highlights its modern relevance, properly credits any images, and documents your work and sources in an individual README."
+        },
+        {
+            "lab_id": 3,
+            "title": "JavaScript, AJAX, JSON, and APIs",
+            "description": "In this lab, you will build an individual web app that uses JavaScript and AJAX to fetch and display JSON data from the OpenWeatherMap API (for Troy, NY) and a second free API of your choice, creatively present and manipulate the returned data with HTML/CSS/Bootstrap/jQuery, and thoroughly document and cite all sources in a README (with optional extra credit for using HTML5 Geolocation)."
+        },
+        {
+            "lab_id": 4,
+            "title": "Rebuilding Your Web App Using Generative AI",
+            "description": "In this lab, you will recreate your Lab 3 project using only AI-generated assets (code, text, and images), maintain a detailed log of all prompts used, and write a reflection on the limitations and challenges of depending entirely on tools like ChatGPT for web development."
+        },
+        {
+            "lab_id": 5,
+            "title": "Using Bloomberg Terminal Data to Enhance Stonkly",
+            "description": "In this lab, you explore how Bloomberg Terminal’s real-time financial data, supply chain information, and professional IB chats could expand your group’s Stonkly ETF analysis web app, and reflect on a hands-on visit to the Bloomberg Lab that highlights the importance of fast navigation and clean data access for your Websys project."
+        },
+        {
+            "lab_id": 6,
+            "title": "Object-Oriented PHP Calculator",
+            "description": "In this lab, you will build a web-based calculator in PHP using object-oriented programming (classes, objects, and methods) along with HTML forms and POST/GET handling to perform arithmetic operations and display results in the browser."
+        },
+        {
+            "lab_id": 7,
+            "title": "Spooky LMS with MySQL, JSON, and PHP",
+            "description": "In this lab, you will work in groups to recreate a Halloween-themed LMS by designing MySQL tables for courses, students, and grades; inserting and querying data; creating a JSON document describing all Websys lectures and labs; storing that JSON in the database; and building a PHP-driven front end and back end to browse and archive the course contents."
+        }
+
+    ]
+
+}

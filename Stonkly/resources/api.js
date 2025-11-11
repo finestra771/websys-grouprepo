@@ -159,8 +159,8 @@ async function loadStock(symbol) {
 
       xScale.domain(d3.extent(data, d => d.time));
       yScale.domain([
-        d3.min(data, d => d.price) * 0.98,
-        d3.max(data, d => d.price) * 1.02
+        d3.min(data, d => d.price) * 0.997,
+        d3.max(data, d => d.price) * 1.003
       ]);
 
       path.datum(data)
