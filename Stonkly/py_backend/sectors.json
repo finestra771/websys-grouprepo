@@ -1,0 +1,82 @@
+{
+    "etf_themes": {
+        "Telecom": {
+            "tickers": ["XLC", "VOX", "FCOM", "IXP", "IYZ", "NXTG", "XTL", "RSPC", "WBIF", "LTL"]
+        },
+        "Utilities": {
+            "tickers": ["XLU", "PAVE", "IGF", "VPU", "IFRA", "NFRA", "FUTY", "FXU", "IDU", "UTES", "GII", "RSPU",
+                        "JXI", "OKLL", "TOLZ", "PUI", "UTSL", "RBLD", "UPW", "PSCU", "INFR", "EMIF", "SDP"]
+        },
+        "Technology": {
+            "tickers": ["QQQ", "VGT", "XLK", "SMH", "IYW", "SOXX", "FTEC", "SOXL", "CIBR", "IGM", "KWEB", "IGV", "ARKK",
+                        "AIQ", "FDN", "IXN", "NVDL", "TECL", "RSPT", "TDIV", "XT", "SKYY", "QTUM", "CQQQ", "QTEC", "BULZ", 
+                        "FNGU", "HACK", "ARKW", "XSD", "USD", "XNTK", "FXL", "BLOK", "ROBO", "CHAT", "BUG", "SOXS", "IVES",
+                        "IETC", "PSI", "IHAK", "ROM", "CONL", "PNQI", "NVDU", "AMDL", "SOXQ", "QQH", "FNGO", "IGPT", "DTCR", 
+                        "WTAI", "MSTX", "BITQ", "FBL", "XSW", "PTF", "WGMI", "BKCH", "EMQQ", "DAPP", "FTXL", "STCE", "PSCT", 
+                        "CWEB", "FDIG", "TRFK", "WCLD", "THNQ", "METV", "ALAI", "CLOU", "TDV", "MSFU", "GINN", "IPAY", "SMCX", 
+                        "SNSR", "IONX", "AAPU", "LOUP", "SPRX", "OGIG", "APLY", "FBY", "SOCL","CRPT","IEUS","IDGT","WCBR","FNGG",
+                        "SHOC","BUZZ","WEBL","IZRL","AVGX", "LEGR","KLIP","ISRA","SARK","AIPO","FFND","AIS","ITEQ","AGIX","IBLC",
+                        "FCLD", "TECS","XAIX","DTEC","XITK","KOID","MINV","PRNT","KTEC","FNGD","DRUP","KQQQ", "INQQ","IQM","FMET",
+                        "KSTR","KEMQ","BLCN","TCHI","WISE","NVDD","KNCT","LRNZ", "XPND","WUGI","TARK","AIVC","RIOX","MST","SEMI",
+                        "UBOT","NVDS","FMQQ","MEME","NBDS", "AAPB","IBOT","AAPD","BCDF","DGIN","TIME","SSG","BERZ","MNRS","BIGY",
+                        "SATO","AAPX","GOOP","TYLG","WEBS","BPAY","AVGU","BNGE","IVRS","BLKC","MSFD","DAT","GAST","BWEB","MSFY",
+                        "VERS","TINY","AAPY","UCYB","XDAT","REW","PLT","SPAM","ARVR","SKYU","BULD","CLOD","BITW"   
+            ]
+        },
+        "Real Estate": {
+            "tickers": ["VNQ", "SCHH", "XLRE", "REET", "VNQI", "IYR", "USRT", "DFGR", "ICF", "RWR", "RWO", "FREL", "BBRE", "HAUZ",
+                        "REZ", "REM", "JPRE", "VGSR", "GQRE", "MORT", "RWX", "KBWY", "SRET", "SPRE", "FRI", "IYRI", "INDS", "CSRE",
+                        "RSPR", "LPRE", "IFGL", "DRN", "URE", "PSR", "BLDG", "REIT", "DRV", "NETL", "NURE", "PPTY", "SRS", "BYRE", 
+                        "VRAI", "FPRO", "RDOG", "REK", "ERET", "RITA", "HAUS","JRE"
+                    ]
+        },
+        "Consumer Discretionary": {
+            "tickers": ["XLY","TSLL","VCR","FDIS","IYC","GGLL","RXI","ESPO","XRT","PEJ","FXD","AMZU","TSLQ","INCO","RTH","CHIQ",
+                        "RSPD","BABX","GGME","IBUY","HERO","TRFM","TSLS","ONLN","BETZ","AMZZ","EBIZ","GAMR","AWAY","CARZ",
+                        "RETL","FDRV","IEDI","PEZ","MUSQ","BJK","WANT","NERD","TSLP","PSCD","TSL","UCC","AMZP","GGLS","NFLP",
+                        "AMZD","BUYZ","FLYU","VICE","OND","ISHP","ODDS","CARU","SCC","EMTY","BEDZ","CARD","FLYD","TSLI"]
+        },
+        "Consumer Staples": {
+            "tickers": ["XLP","VDC","IEV","FSTA","IYK","KXI","FXG","ECON","RSPS","PBJ","PSL","PSCC","WBIL","FTXG","UGE","CLIX","EATZ","SZK"]
+        },
+        "Energy": {
+            "tickers": ["XLE", "AMLP", "VDE", "NLR", "EMLP", "MLPX", "ICLN", "XOP", "IXC", "MLPA", "FENY", "IYE", "OIH", "TAN", "EIPI",
+                        "NUKZ", "AMJB", "TPYP", "PBW", "QCLN", "ATMP", "IEO", "RSPG", "FCG", "UMI", "AMZA", "ENFR", "FXN",
+                        "LCTD", "XES", "DRLL", "GUSH", "CNRG", "ERX", "MLPB", "FAN", "NZAC", "ERTH", "SMOG", "IEZ", "ACES",
+                        "FTXN", "PBD", "KWT", "HYDR", "USAI", "EINC", "PXE", "DIG", "PSCE", "PXI", "AMUB", "DRIP", "FRNW",
+                        "CTEC", "CRAK", "COAL", "NRGU", "PXJ", "RNRG", "URAN", "ERY", "DUG", "MLPR", "OILT", "VCLN",
+                        "NZUS", "SOLR", "CTEX", "RNWZ", "NRGD"
+            ]
+        },
+        "Financials": {
+            "tickers": ["XLF", "VFH", "KBWB", "EUFN", "IYF", "KRE", "FAS", "FNCL", "FXO", "IYG", "IAI", "BIZD", "KBE", "DPST", "UYG",
+                        "KIE", "IAK", "IXG", "KCE", "IAT", "KBWD", "KBWP", "PSP", "DFNL", "RSPF", "FINX", "GREK", "PBDC",
+                        "FTXO", "FAZ", "QABA", "PHDG", "PFI", "VPC", "KBWR", "GABF", "ZIG", "BNKU", "HOOX", "PSCF",
+                        "GSIB", "BDCZ", "PEX", "SKF", "INDF", "SEF", "BDCX", "BNKD"]
+        },
+        "Healthcare": {
+            "tickers": ["XLV", "VHT", "IBB", "XBI", "IHI", "IXJ", "IYH", "FHLC", "ARKG", "FBT", "PPH", "FXH", "IHF", "LABU", "RSPH",
+                        "IHE", "BBH", "PJP", "PINK", "PBE", "HIMZ", "CURE", "XPH", "PSCH", "XHE", "DNA", "PTH", "CNBS",
+                        "KURE", "CANC", "SBIO", "XHS", "RXL", "AGNG", "LABD", "BIB", "GNOM", "HTEC", "HRTS", "IBBQ",
+                        "BBP", "MEDI", "GDOC", "HELX", "BBC", "PSIL", "FTXH", "PILL", "FDHT", "BMED", "IBRN", "BIS",
+                        "EKG", "WDNA", "MDEV", "RXD"]
+        },
+        "Industrials": {
+            "tickers": ["XLI", "ITA", "PPA", "VIS", "AIRR", "SHLD", "XAR", "PHO", "FIW", "FXR", "IYJ", "FIDU", "EUAD", "CGW",
+                        "EXI", "JETS", "RSPN", "IYT", "ARKX", "PRN", "DFEN", "PIO", "MISL", "RSHO", "PSCI", "UFO",
+                        "XTN", "FITE", "EVX", "NATO", "HDGE", "TBLU", "BOAT", "BDRY", "DUSL", "FTXR", "AQWA",
+                        "ROKT", "JEDI", "UXI", "HAIL", "TPOR", "WAR", "SEA", "MOTO", "SHPP", "RFEU", "EFRA",
+                        "JETU", "JETD", "MAKX", "SIJ", "SUPL"]
+        },
+        "Materials": {
+            "tickers": ["GDX", "GDXJ", "XLB", "GUNR", "URA", "GRID", "SIL", "GNR", "COPX", "XME", "VAW", "SILJ", "ITB", "RING",
+                        "URNM", "XHB", "GDXU", "LIT", "REMX", "INFL", "NUGT", "PICK", "NANR", "IYM", "IGE", "NAIL",
+                        "MOO", "SGDM", "SLVP", "JNUG", "FMAT", "CCNR", "PKB", "SGDJ", "WOOD", "MXI", "FXZ",
+                        "HAP", "GOAU", "RSPM", "SLX", "SHNY", "GOEX", "DUST", "FTRI", "BATT", "VEGI",
+                        "GDXD", "PYZ", "CSNR", "CUT", "JDST", "HOMZ", "UYM", "DULL", "AUMI", "GMET",
+                        "SLJY", "PSCM", "DMAT", "NDIV", "SIMS", "KROP", "FTAG", "GBLD", "TINT", "SMN"
+            ]
+        }
+    }
+}
+
