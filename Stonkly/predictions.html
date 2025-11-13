@@ -14,7 +14,6 @@
         }
 
        #sectorTable {
-        font-family: Arial, sans-serif;
         border-collapse: collapse;
         width: 60%;              
         margin: 30px auto; 
@@ -23,7 +22,7 @@
         border-radius: 10px;
         background-color: #fff;
         overflow: hidden;      
-        margin-top: 54px;
+        margin-top: 102px;
     }
 
     #sectorTable th {
@@ -118,6 +117,120 @@
         margin-bottom: -30px;
     }
 
+    #searchETF {
+        padding: 30px;
+    }
+
+    #searchETF h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #6b3e26;
+    }
+
+    .search-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sector-card {
+        flex: 1 1 300px;
+        background-color: #F3DFCB;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .sector-card h3 {   
+        margin-top: 0;
+        color: #a0522d;
+        margin-bottom: 9px;
+    }
+
+    .sector-card select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 20px 0;
+        border-radius: 10px;
+        border: 1px solid #d2a679;
+        background-color: #fff4f0;
+    }
+
+    #etfListContainer {
+        height: 234px;
+        overflow-y: auto;
+        padding: 5px;
+        background-color: #fff4f0;
+        border-radius: 10px;
+    }
+
+    #etfList li {
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        background-color: #e0b790;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        list-style: none;
+        margin-left: -42px;
+        color: white;
+    }
+    
+    #etfList li:hover {
+        background-color: #937c68;
+        transform: translateX(5px);
+    }
+
+    .search-card {
+        flex: 1 1 300px;
+        background-color: #F3DFCB;
+        padding: 20px;
+        border-radius: 20px;    
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .search-card h3 {
+        margin-top: 0;
+        color: #a0522d;
+    }
+
+    .etf-search {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .etf-search input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #d2a679;
+        background-color: #fff4f0;
+    }
+
+    .etf-search button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #a0522d;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .etf-search button:hover {
+        background-color: #8b3a1a;
+    }
+
+    #etfResult {
+        text-align: center;
+        background-color: #fff4f0;
+        padding: 15px;
+        border-radius: 10px;
+        min-height: 214px;
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    }
     </style>
     <link rel="icon" href="resources/images/bubble-tea.png" type="image/png">
     <title>Stonkly 💸</title>
@@ -171,6 +284,33 @@
                 </div>
                 <h3>Sector Distribution 📊</h3>
                 <div id="sectorPieChart"></div>
+            </div>
+        </div>
+    </section>
+
+   <section id="searchETF">
+        <h2>ETF Explorer</h2>
+        <div class="search-container">
+            <!-- Left side: sector select & ETF list -->
+            <div class="sector-card">
+                <h3>Browse by Sector</h3>
+                <select id="sectorSelect">
+                    <option value="">Select Sector...</option>
+                </select>
+
+                <div id="etfListContainer">
+                    <ul id="etfList"></ul>
+                </div>
+            </div>
+
+            <!-- Right side: search by name -->
+            <div class="search-card">
+                <h3>Search for an ETF</h3>
+                <div class="etf-search">
+                    <input type="text" id="etfSearchInput" placeholder="Enter ETF name or symbol">
+                    <button id="etfSearchButton">Search</button>
+                </div>
+                <div id="etfResult"></div>
             </div>
         </div>
     </section>
