@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import yfinance as yf
 import json
 
+# Data as of 11/12/2025
 # Load your JSON file
 with open("Stonkly\py_backend\sectors.json", "r") as f:
     etf_data = json.load(f)
