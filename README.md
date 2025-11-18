@@ -32,3 +32,4 @@ Hey we are Gatcha!, a team of six focused on developing an interactive site deal
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame drawing stock market title
 - https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur was using for some styling
 - https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke path drawing
+- https://etfdb.com/etfs/ information and data for etfs

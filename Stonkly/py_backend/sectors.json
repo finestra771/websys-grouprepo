@@ -1,0 +1,149 @@
+{
+    "etf_themes": {
+        "Telecom": {
+            "tickers": ["XLC", "VOX", "FCOM", "IXP", "IYZ", "NXTG", "XTL", "RSPC", "WBIF", "LTL"]
+        },
+        "Utilities": {
+            "tickers": ["XLU", "PAVE", "IGF", "VPU", "IFRA", "NFRA", "FUTY", "FXU", "IDU", "UTES", "GII", "RSPU",
+                        "JXI", "OKLL", "TOLZ", "PUI", "UTSL", "RBLD", "UPW", "PSCU", "INFR", "EMIF", "SDP"]
+        },
+        "Technology": {
+            "tickers": ["QQQ", "VGT", "XLK", "SMH", "IYW", "SOXX", "FTEC", "SOXL", "CIBR", "IGM", "KWEB", "IGV", "ARKK",
+                        "AIQ", "FDN", "IXN", "NVDL", "TECL", "RSPT", "TDIV", "XT", "SKYY", "QTUM", "CQQQ", "QTEC", "BULZ", 
+                        "FNGU", "HACK", "ARKW", "XSD", "USD", "XNTK", "FXL", "BLOK", "ROBO", "CHAT", "BUG", "SOXS", "IVES",
+                        "IETC", "PSI", "IHAK", "ROM", "CONL", "PNQI", "NVDU", "AMDL", "SOXQ", "QQH", "FNGO", "IGPT", "DTCR", 
+                        "WTAI", "MSTX", "BITQ", "FBL", "XSW", "PTF", "WGMI", "BKCH", "EMQQ", "DAPP", "FTXL", "STCE", "PSCT", 
+                        "CWEB", "FDIG", "TRFK", "WCLD", "THNQ", "METV", "ALAI", "CLOU", "TDV", "MSFU", "GINN", "IPAY", "SMCX", 
+                        "SNSR", "IONX", "AAPU", "LOUP", "SPRX", "OGIG", "APLY", "FBY", "SOCL","CRPT","IEUS","IDGT","WCBR","FNGG",
+                        "SHOC","BUZZ","WEBL","IZRL","AVGX", "LEGR","KLIP","ISRA","SARK","AIPO","FFND","AIS","ITEQ","AGIX","IBLC",
+                        "FCLD", "TECS","XAIX","DTEC","XITK","KOID","MINV","PRNT","KTEC","FNGD","DRUP","KQQQ", "INQQ","IQM","FMET",
+                        "KSTR","KEMQ","BLCN","TCHI","WISE","NVDD","KNCT","LRNZ", "XPND","WUGI","TARK","AIVC","RIOX","MST","SEMI",
+                        "UBOT","NVDS","FMQQ","MEME","NBDS", "AAPB","IBOT","AAPD","BCDF","DGIN","TIME","SSG","BERZ","MNRS","BIGY",
+                        "SATO","AAPX","GOOP","TYLG","WEBS","BPAY","AVGU","BNGE","IVRS","BLKC","MSFD","DAT","GAST","BWEB","MSFY",
+                        "VERS","TINY","AAPY","UCYB","XDAT","REW","PLT","SPAM","ARVR","SKYU","BULD","CLOD","BITW"   
+            ]
+        },
+        "Real Estate": {
+            "tickers": ["VNQ", "SCHH", "XLRE", "REET", "VNQI", "IYR", "USRT", "DFGR", "ICF", "RWR", "RWO", "FREL", "BBRE", "HAUZ",
+                        "REZ", "REM", "JPRE", "VGSR", "GQRE", "MORT", "RWX", "KBWY", "SRET", "SPRE", "FRI", "IYRI", "INDS", "CSRE",
+                        "RSPR", "LPRE", "IFGL", "DRN", "URE", "PSR", "BLDG", "REIT", "DRV", "NETL", "NURE", "PPTY", "SRS", "BYRE", 
+                        "VRAI", "FPRO", "RDOG", "REK", "ERET", "RITA", "HAUS","JRE"
+                    ]
+        },
+        "Consumer Discretionary": {
+            "tickers": ["XLY","TSLL","VCR","FDIS","IYC","GGLL","RXI","ESPO","XRT","PEJ","FXD","AMZU","TSLQ","INCO","RTH","CHIQ",
+                        "RSPD","BABX","GGME","IBUY","HERO","TRFM","TSLS","ONLN","BETZ","AMZZ","EBIZ","GAMR","AWAY","CARZ",
+                        "RETL","FDRV","IEDI","PEZ","MUSQ","BJK","WANT","NERD","TSLP","PSCD","TSL","UCC","AMZP","GGLS","NFLP",
+                        "AMZD","BUYZ","FLYU","VICE","OND","ISHP","ODDS","CARU","SCC","EMTY","BEDZ","CARD","FLYD","TSLI"]
+        },
+        "Consumer Staples": {
+            "tickers": ["XLP","VDC","IEV","FSTA","IYK","KXI","FXG","ECON","RSPS","PBJ","PSL","PSCC","WBIL","FTXG","UGE","CLIX","EATZ","SZK"]
+        },
+        "Energy": {
+            "tickers": ["XLE", "AMLP", "VDE", "NLR", "EMLP", "MLPX", "ICLN", "XOP", "IXC", "MLPA", "FENY", "IYE", "OIH", "TAN", "EIPI",
+                        "NUKZ", "AMJB", "TPYP", "PBW", "QCLN", "ATMP", "IEO", "RSPG", "FCG", "UMI", "AMZA", "ENFR", "FXN",
+                        "LCTD", "XES", "DRLL", "GUSH", "CNRG", "ERX", "MLPB", "FAN", "NZAC", "ERTH", "SMOG", "IEZ", "ACES",
+                        "FTXN", "PBD", "KWT", "HYDR", "USAI", "EINC", "PXE", "DIG", "PSCE", "PXI", "AMUB", "DRIP", "FRNW",
+                        "CTEC", "CRAK", "COAL", "NRGU", "PXJ", "RNRG", "URAN", "ERY", "DUG", "MLPR", "OILT", "VCLN",
+                        "NZUS", "SOLR", "CTEX", "RNWZ", "NRGD"
+            ]
+        },
+        "Financials": {
+            "tickers": ["XLF", "VFH", "KBWB", "EUFN", "IYF", "KRE", "FAS", "FNCL", "FXO", "IYG", "IAI", "BIZD", "KBE", "DPST", "UYG",
+                        "KIE", "IAK", "IXG", "KCE", "IAT", "KBWD", "KBWP", "PSP", "DFNL", "RSPF", "FINX", "GREK", "PBDC",
+                        "FTXO", "FAZ", "QABA", "PHDG", "PFI", "VPC", "KBWR", "GABF", "ZIG", "BNKU", "HOOX", "PSCF",
+                        "GSIB", "BDCZ", "PEX", "SKF", "INDF", "SEF", "BDCX", "BNKD"]
+        },
+        "Healthcare": {
+            "tickers": ["XLV", "VHT", "IBB", "XBI", "IHI", "IXJ", "IYH", "FHLC", "ARKG", "FBT", "PPH", "FXH", "IHF", "LABU", "RSPH",
+                        "IHE", "BBH", "PJP", "PINK", "PBE", "HIMZ", "CURE", "XPH", "PSCH", "XHE", "DNA", "PTH", "CNBS",
+                        "KURE", "CANC", "SBIO", "XHS", "RXL", "AGNG", "LABD", "BIB", "GNOM", "HTEC", "HRTS", "IBBQ",
+                        "BBP", "MEDI", "GDOC", "HELX", "BBC", "PSIL", "FTXH", "PILL", "FDHT", "BMED", "IBRN", "BIS",
+                        "EKG", "WDNA", "MDEV", "RXD"]
+        },
+        "Industrials": {
+            "tickers": ["XLI", "ITA", "PPA", "VIS", "AIRR", "SHLD", "XAR", "PHO", "FIW", "FXR", "IYJ", "FIDU", "EUAD", "CGW",
+                        "EXI", "JETS", "RSPN", "IYT", "ARKX", "PRN", "DFEN", "PIO", "MISL", "RSHO", "PSCI", "UFO",
+                        "XTN", "FITE", "EVX", "NATO", "HDGE", "TBLU", "BOAT", "BDRY", "DUSL", "FTXR", "AQWA",
+                        "ROKT", "JEDI", "UXI", "HAIL", "TPOR", "WAR", "SEA", "MOTO", "SHPP", "RFEU", "EFRA",
+                        "JETU", "JETD", "MAKX", "SIJ", "SUPL"]
+        },
+        "Materials": {
+            "tickers": ["GDX", "GDXJ", "XLB", "GUNR", "URA", "GRID", "SIL", "GNR", "COPX", "XME", "VAW", "SILJ", "ITB", "RING",
+                        "URNM", "XHB", "GDXU", "LIT", "REMX", "INFL", "NUGT", "PICK", "NANR", "IYM", "IGE", "NAIL",
+                        "MOO", "SGDM", "SLVP", "JNUG", "FMAT", "CCNR", "PKB", "SGDJ", "WOOD", "MXI", "FXZ",
+                        "HAP", "GOAU", "RSPM", "SLX", "SHNY", "GOEX", "DUST", "FTRI", "BATT", "VEGI",
+                        "GDXD", "PYZ", "CSNR", "CUT", "JDST", "HOMZ", "UYM", "DULL", "AUMI", "GMET",
+                        "SLJY", "PSCM", "DMAT", "NDIV", "SIMS", "KROP", "FTAG", "GBLD", "TINT", "SMN"
+            ]
+        }
+    },
+    "sector_stats": { 
+        "Technology": {
+        "AUM_Rank": 1,
+        "Assets_Under_Management_MM": 876474.12,
+        "Num_ETFs": 180,
+        "Description": "These ETFs cover a wide range of goods and services in relation to technology. Popular tech sectors include AI, internet providers, networking equipment makers, semiconductor makers, mobile device makers, software providers, and more."
+        },
+        "Financials": {
+        "AUM_Rank": 2,
+        "Assets_Under_Management_MM": 104053.93,
+        "Num_ETFs": 48,
+        "Description": "Financial ETFs cover a wide range of companies and services involved in the stock market and banking industry. Notably, this includes regional and national banks, investment banks, brokers, insurance providers, and mortgage providers."
+        },
+        "Materials": {
+        "AUM_Rank": 3,
+        "Assets_Under_Management_MM": 90779.04,
+        "Num_ETFs": 67,
+        "Description": "Material ETFs invest in stocks of companies involved in the materials industry, such as miners, agricultural products makers, timber companies, and homebuilders. These companies provide the raw materials used in the production of goods and services across industries."
+        },
+        "Healthcare": {
+        "AUM_Rank": 4,
+        "Assets_Under_Management_MM": 90247.09,
+        "Num_ETFs": 56,
+        "Description": "Healthcare ETFs invest in stocks of companies involved in healthcare. These companies include biotech, pharma, hospitals, medical device makers, and more. Healthcare is often seen as a defensive sector, as its demand is typically stable regardless of the economy."
+        },
+        "Industrials": {
+        "AUM_Rank": 5,
+        "Assets_Under_Management_MM": 82307.37,
+        "Num_ETFs": 53,
+        "Description": "Industrial ETFs invest in stocks of companies involved in the industrials industry. Industrial stocks include airlines, aerospace companies, shippers, waste management firms, and many more. These are essential services that help drive economic growth."
+        },
+        "Energy": {
+        "AUM_Rank": 6,
+        "Assets_Under_Management_MM": 75898.47,
+        "Num_ETFs": 71,
+        "Description": "Energy ETFs invest in stocks of companies involved in the energy industry. These companies include oil & natural gas producers/transporters, utility operators, alternative energy firms, and more. The energy sector is often influenced by geopolitical events and pricing."
+        },
+        "Real Estate": {
+        "AUM_Rank": 7,
+        "Assets_Under_Management_MM": 74724.29,
+        "Num_ETFs": 50,
+        "Description": "Real Estate ETFs hold securities that operate in the real estate industry, including residential/commercial real estate, mortgage services, and more. These ETFs often invest in Real Estate Investment Trusts (REITs), which are companies that own income-generating real estate."
+        },
+        "Utilities": {
+        "AUM_Rank": 8,
+        "Assets_Under_Management_MM": 63550.08,
+        "Num_ETFs": 23,
+        "Description": "Utility ETFs invest in stocks of companies that operate in the utilities industry. These companies provide essential services such as electricity, water, and natural gas. Utility stocks are often seen as defensive investments due to their stable demand."
+        },
+        "Consumer Discretionary": {
+        "AUM_Rank": 9,
+        "Assets_Under_Management_MM": 48577.51,
+        "Num_ETFs": 59,
+        "Description": "Consumer Discretionary ETFs invest in stocks of companies that sell nonessential (elastic) goods and services. These companies operate in industries such as restaurants, electronics, entertainment, and luxury goods."
+        },
+        "Telecom": {
+        "AUM_Rank": 10,
+        "Assets_Under_Management_MM": 35443.71,
+        "Num_ETFs": 10,
+        "Description": "Telecom ETFs invest in stocks of companies that operate in the telecom industry. These companies include both landline and mobile phone carriers, as well as mobile phone manufacturers. The telecom sector is essential for communication and connectivity."
+        },
+        "Consumer Staples": {
+        "AUM_Rank": 11,
+        "Assets_Under_Management_MM": 28010.66,
+        "Num_ETFs": 18,
+        "Description": "Consumer Staples ETFs invest in stocks of companies that operate in the consumer staples industry. Consumer staples are inelastic goods, and include items like drinks, personal hygiene items, and basic foods. These goods are often in demand regardless of the economy."
+        }
+    }
+}
