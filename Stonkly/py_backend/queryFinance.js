@@ -316,6 +316,7 @@ function drawETFLineChart(data) {
 
     const svg = d3.select("#etfGraphing")
         .append("svg")
+        .attr("id", "etfChartSVG")
         .attr("width", width)
         .attr("height", height)
         .style("background", "#f9f9f9")
@@ -341,7 +342,7 @@ function drawETFLineChart(data) {
 
     // Clip for zooming
     svg.append("defs").append("clipPath")
-        .attr("id", "clip")
+        .attr("id", "etf-clip")
         .append("rect")
         .attr("x", margin.left)
         .attr("y", margin.top)
@@ -350,7 +351,7 @@ function drawETFLineChart(data) {
 
     // Chart group
     const chartGroup = svg.append("g")
-        .attr("clip-path", "url(#clip)");
+        .attr("clip-path", "url(#etf-clip)");
 
     // Line path
     const linePath = chartGroup.append("path")
@@ -383,6 +384,8 @@ function drawETFLineChart(data) {
         .style("pointer-events", "none")
         .style("box-shadow", "0 4px 12px rgba(0,0,0,0.15)");
 
+    let lastMousePos = null; // LOCAL TO ETF CHART
+    
     // Cursor focus group
     const focus = chartGroup.append("g")
         .style("display", "none");
@@ -547,82 +550,85 @@ async function loadSectors2() {
             sectorSelect.appendChild(option);
         });
 
-        async function getFavorites() {
-            try {
-                const res = await fetch("getFavorites.php");
-                const data = await res.json();
-                if (data.error) return new Set();
-                    return new Set(data.favorites); // assuming getFavorites.php returns {favorites: ["QQQ","SPY",...]}
-            } catch (err) {
-                console.error("Failed to load favorites:", err);
-                return new Set();
-            }
-        }
         // Handle sector selection
-        sectorSelect.addEventListener("change", async e => {
-        const selected = e.target.value;
-        etfList.innerHTML = ""; // clear previous list
+        sectorSelect.addEventListener("change", e => {
+            const selected = e.target.value;
+            etfList.innerHTML = ""; // clear previous list
 
-        if (!selected) return;
+            if (!selected) return;
 
-        const favorites = await getFavorites(); // <-- added
-
-        const tickers = data.etf_themes[selected]?.tickers || [];
-        if (tickers.length === 0) {
-            etfList.innerHTML = "<li>No ETFs found for this sector.</li>";
-            return;
-        }
-
-        tickers.forEach(ticker => {
-            const li = document.createElement("li");
-            li.style.display = "flex";
-            li.style.alignItems = "center";
-            li.style.justifyContent = "space-between";
-            li.style.cursor = "pointer";
-
-            const tickerSpan = document.createElement("span");
-            tickerSpan.textContent = ticker;
-            tickerSpan.style.marginRight = "20px";
-
-            // Star button
-            const starButton = document.createElement("button");
-            starButton.style.cursor = "pointer";
-            starButton.style.fontSize = "16px";
-
-            // Mark favorite if in user's favorites
-            if (favorites.has(ticker)) {
-                starButton.textContent = "★";
-                starButton.style.color = "gold";
-            } else {
-                starButton.textContent = "☆";
-                starButton.style.color = "";
+            const tickers = data.etf_themes[selected]?.tickers || [];
+            if (tickers.length === 0) {
+                etfList.innerHTML = "<li>No ETFs found for this sector.</li>";
+                return;
             }
 
-            // Toggle favorite
-            starButton.addEventListener("click", (e) => {
-                e.stopPropagation(); // prevent li click
-                const action = starButton.textContent === "☆" ? "add" : "remove";
-                starButton.textContent = action === "add" ? "★" : "☆";
-                starButton.style.color = action === "add" ? "gold" : "";
+            tickers.forEach(ticker => {
+                const li = document.createElement("li");
+                li.style.alignItems = "center";
+                li.style.justifyContent = "space-between";
+                li.style.cursor = "pointer";
 
-                fetch("favoriteHandler.php", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: `ticker=${encodeURIComponent(ticker)}&action=${action}`
-                }).catch(err => console.error("Error updating favorite:", err));
+                const tickerSpan = document.createElement("span");
+                tickerSpan.textContent = ticker;
+                // space
+                tickerSpan.style.marginRight = "20px";
+
+                // Star button
+                const starButton = document.createElement("button");
+                starButton.textContent = "☆";
+                starButton.style.cursor = "pointer";
+                starButton.style.fontSize = "16px";
+
+                // Toggle favorite
+                starButton.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Prevent triggering the li click event
+                    if (starButton.textContent === "☆") {
+                        starButton.textContent = "★"; // Mark as favorite
+                        starButton.style.color = "gold";
+                        // Send request to PHP
+                        fetch("favoriteHandler.php", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                            body: `ticker=${encodeURIComponent(ticker)}&action=add`
+                        })
+                            .then(res => res.text())
+                            .then(data => {
+                                // console.log("Server response:", data);
+                            })
+                            .catch(err => {
+                                console.error("Error updating favorite:", err);
+                            });
+                    } else {
+                        starButton.textContent = "☆"; // Unmark as favorite
+                        starButton.style.color = "";
+                        // Send request to PHP
+                        fetch("favoriteHandler.php", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                            body: `ticker=${encodeURIComponent(ticker)}&action=remove`
+                        })
+                            .then(res => res.text())
+                            .then(data => {
+                                console.log("Server response:", data);
+                            })
+                            .catch(err => {
+                                console.error("Error updating favorite:", err);
+                            });
+                    }
+                });
+
+                // Clicking fills search bar and fetches data
+                li.addEventListener("click", () => {
+                    document.getElementById("etfSearchInput").value = ticker;
+                    fetchETFData(ticker);
+                });
+
+                li.appendChild(tickerSpan);
+                li.appendChild(starButton);
+                etfList.appendChild(li);
             });
-
-            // Clicking fills search bar and fetches data
-            li.addEventListener("click", () => {
-                document.getElementById("etfSearchInput").value = ticker;
-                fetchETFData(ticker);
-            });
-
-            li.appendChild(tickerSpan);
-            li.appendChild(starButton);
-            etfList.appendChild(li);
         });
-    });
 
         if (sectors.length > 0) {
             sectorSelect.value = sectors[2]; // pre-select first sector 2 is for technology
