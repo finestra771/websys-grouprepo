@@ -14,23 +14,33 @@
 <body>
 
     <!-- Navigation Bar -->
+    <?php
+    session_start();
+    ?>
+
     <nav>
         <h1 class="title">
             <a href="#" id="link0"> STONKLY💸</a>
         </h1>
-        <ul> 
-            <li><a href="./index.html" class="nav-button">HOME</a></li>
-            <li><a href="./companies.html" class="nav-button">COMPANIES</a></li>
-            <li><a href="./stock.html" class="nav-button">STOCK</a></li>
-            <li><a href="./predictions.html" class="nav-button">PREDICTIONS</a></li>
-            <li><a href="./mission.html" class="nav-button">OUR MISSION</a></li>
-            <li><a href="./meet-team.html" class="nav-button">CONTACTS</a></li>
+
+        <ul>
+            <li><a href="./index.php" class="nav-button">HOME</a></li>
+            <li><a href="./meet-team.php" class="nav-button">CONTACTS</a></li>
+
+            <?php if (isset($_SESSION['username'])): ?>
+                <li><a href="./myinfo.php" class="nav-button">MY INFO</a></li>
+                <li><a href="./predictions.php" class="nav-button">ANALYZER</a></li>
+                <li><a href="./auth.php?action=logout" class="nav-button">LOGOUT</a></li>
+            <?php else: ?>
+                <li><a href="./login.php" class="nav-button">LOGIN</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 
+
     <header id="home">
         <canvas id="stockCanvas"></canvas>
-        <div id = titleStart>
+        <div id=titleStart>
             <div id=container>
                 <div id=flip>
                     <div>✦ STONKLY ✦</div>
@@ -85,8 +95,8 @@
             ctx.beginPath();
             ctx.lineWidth = 3;
             ctx.strokeStyle = brown;
-            ctx.shadowBlur = 0;      
-            ctx.shadowColor = "transparent"; 
+            ctx.shadowBlur = 0;
+            ctx.shadowColor = "transparent";
 
             //go through each points and give animation
             for (let i = 0; i < points.length; i++) {
@@ -106,27 +116,31 @@
         <div id="block">
             <div id="infoBlock">
                 <h1>What is Stonkly💸?</h1>
-                <p>Stonkly is a student-built finance analysis site that helps users learn more about the Stock Market. 
-                  Designed for both beginners and experts alike, Stonkly plans to bridge the gap between the regular consumer 
-                  and hedge fund manager by making real-time stock data accessible and understandable, rather than overwhelming 
-                  users with features.</p>         
+                <p>Stonkly is a student-built finance analysis site that helps users learn more about the Stock Market.
+                    Designed for both beginners and experts alike, Stonkly plans to bridge the gap between the regular
+                    consumer and hedge fund manager by making real-time stock data accessible and understandable, rather 
+                    than overwhelming users with features.</p>
             </div>
             <div id="featureList">
                 <h1> What you'll get</h1>
                 <ul>
-                    <li><i class="fa-solid fa-square-check fa-lg"></i>    Fast ticker lookup with readable charts</li>
-                    <li><i class="fa-solid fa-square-check fa-lg"></i>    Quick comparisons to spot trends</li>
-                    <li><i class="fa-solid fa-square-check fa-lg"></i>    Headline context next to price moves</li>
-                    <li><i class="fa-solid fa-square-check fa-lg"></i>    Short definitions for common indicators</li>
+                    <li><i class="fa-solid fa-square-check fa-lg"></i> Fast ticker lookup with readable charts</li>
+                    <li><i class="fa-solid fa-square-check fa-lg"></i> Quick comparisons to spot trends</li>
+                    <li><i class="fa-solid fa-square-check fa-lg"></i> Headline context next to price moves</li>
+                    <li><i class="fa-solid fa-square-check fa-lg"></i> Short definitions for common indicators</li>
                 </ul>
             </div>
         </div>
 
         <div id="analyzer" class="section">
-                <h2 class="subtle" style="margin-bottom:12px">
-                    Open the analyzer to search tickers, view charts, and see key context.
-                </h2>
-                <a class="btn" href="stock.html">Open Company Analyzer →</a>
+            <h2 class="subtle" style="margin-bottom:12px">
+                Open the analyzer to search tickers, view charts, and see key context.
+            </h2>
+            <?php if (isset($_SESSION['username'])): ?>
+                <a class="btn" href="predictions.php">Open Company Analyzer →</a>
+            <?php else: ?>
+                <a class="btn" href="login.php">Open Company Analyzer →</a>
+            <?php endif; ?>
         </div>
     </section>
 

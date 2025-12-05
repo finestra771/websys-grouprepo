@@ -31,7 +31,7 @@
 body {
   margin: 0;
   font-family: 'Monarch_Bold', Arial, sans-serif;
-  background-color: #FFFFF9;
+  background-color: #ffffff;
   color: #B87432;
   line-height: 1.6;
   text-align: center;
@@ -41,7 +41,7 @@ body {
 nav {
   z-index: 1000;
   box-sizing: border-box;
-  background-color: #FFFFF9;
+  background-color: #ffffff;
   height: 12vh;
   width: 100%;
   display: flex;
@@ -131,7 +131,7 @@ header {
 /* About Us */
 #about-us {
   padding: 60px 20px;
-  background-color: #FFFFF9;
+  background-color: #ffffff;
   display: grid;
 }
 

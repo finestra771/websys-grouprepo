@@ -1,3 +1,7 @@
+<?php
+session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,12 +23,16 @@
             <a href="#" id="link0"> STONKLY💸</a>
         </h1>
         <ul>
-            <li><a href="./index.html" class="nav-button">HOME</a></li>
-            <li><a href="./companies.html" class="nav-button">COMPANIES</a></li>
-            <li><a href="./stock.html" class="nav-button">STOCK</a></li>
-            <li><a href="./predictions.html" class="nav-button">PREDICTIONS</a></li>
-            <li><a href="./mission.html" class="nav-button">OUR MISSION</a></li>
-            <li><a href="./meet-team.html" class="nav-button">CONTACTS</a></li>
+            <li><a href="./index.php" class="nav-button">HOME</a></li>
+            <li><a href="./meet-team.php" class="nav-button">CONTACTS</a></li>
+
+            <?php if (isset($_SESSION['username'])): ?>
+                <li><a href="./myinfo.php" class="nav-button">MY INFO</a></li>
+                <li><a href="./predictions.php" class="nav-button">ANALYZER</a></li>
+                <li><a href="./auth.php?action=logout" class="nav-button">LOGOUT</a></li>
+            <?php else: ?>
+                <li><a href="./login.php" class="nav-button">LOGIN</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 
