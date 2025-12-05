@@ -7,6 +7,17 @@ import os
 import yfinance as yf
 from typing import Literal
 import json
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+BASE_DIR = os.path.dirname(__file__)
+
+@app.get("/sectors")
+async def get_sectors():
+    with open(SECTORS_FILE, "r") as f:
+        data = json.load(f)
+    return JSONResponse(content=data)
 
 # ------------------------------
 # Load environment and data
@@ -16,7 +27,8 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-with open("Stonkly/py_backend/sectors.json", "r") as f:
+SECTORS_FILE = os.path.join(BASE_DIR, "sectors.json")
+with open(SECTORS_FILE, "r") as f:
     etf_data = json.load(f)
 
 # ------------------------------
